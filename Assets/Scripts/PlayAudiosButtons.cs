@@ -7,27 +7,19 @@ public class PlayAudiosButtons : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip audioClip;
-    private bool isPlaying;
 
     // Start is called before the first frame update
     void Start()
     {
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
-        isPlaying = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void playSound()
     {
-
-    }
-
-    public void playSoundEffect(float volume = 1.0f)
-    {
-        audioSource.volume = volume;
-        if(audioSource.clip != audioClip)
+        audioSource.pitch = 1.0f;
+        if (audioSource.clip != audioClip)
         {
-            audioSource.Stop();
+            //audioSource.Stop();
             audioSource.clip = audioClip;
             audioSource.Play();
         }
@@ -43,28 +35,36 @@ public class PlayAudiosButtons : MonoBehaviour
             }
         }
     }
+    public void playSoundEffect()
+    {
+        audioSource.volume = 1.0f;
+        audioSource.panStereo = 0.0f;
+        playSound();
+        
+    }
 
     public void playLowAmplitudSound()
     {
-        playSoundEffect(0.1f);
+        audioSource.volume = 0.1f;
+        playSound();
     }
 
     public void playHighAmplitudSound()
     {
-       
-        playSoundEffect(1.0f);
+        audioSource.volume = 1.0f;
+        playSound();
     }
     
     public void playLowPhase()
     {
-        audioSource.panStereo = 0;
-        playSoundEffect(1.0f);
+        audioSource.panStereo = 0.0f;
+        playSound();
     }
 
     public void playHighPhase()
     {
-        audioSource.panStereo = 1;
-        playSoundEffect(1.0f);
+        audioSource.panStereo = 1.0f;
+        playSound();
     }
 
     public void getSettingsVolume()

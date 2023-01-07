@@ -25,7 +25,6 @@ public class AdditiveSynthesis : MonoBehaviour
     float sample;
     public float[] samples;
     public float[] finalSamples;
-    bool firstTime = true;
     Draw draw;
 
     private void Awake()
