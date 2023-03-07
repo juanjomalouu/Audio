@@ -41,36 +41,36 @@ public class ModifyCustomWave : MonoBehaviour
         _sliderF1.onValueChanged.AddListener((v) =>
         {
             _f1 = v / 1000;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[1] = _f1;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            additiveSynthesis.amplitudes[1] = _f1;
+            additiveSynthesis.paintWave();
         });
 
         _sliderF2.onValueChanged.AddListener((v) =>
         {
             _f2 = v / 1000;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[2] = _f2;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            additiveSynthesis.amplitudes[2] = _f2;
+            additiveSynthesis.paintWave();
         });
 
         _sliderF3.onValueChanged.AddListener((v) =>
         {
-            _f3 = v;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[3] = _f3;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            _f3 = v / 1000;
+            additiveSynthesis.amplitudes[3] = _f3;
+            additiveSynthesis.paintWave();
         });
 
         _sliderF4.onValueChanged.AddListener((v) =>
         {
-            _f4 = v;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[4] = _f4;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            _f4 = v / 1000;
+            additiveSynthesis.amplitudes[4] = _f4;
+            additiveSynthesis.paintWave();
         });
 
         _sliderF5.onValueChanged.AddListener((v) =>
         {
-            _f5 = v;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[5] = _f5;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            _f5 = v / 1000;
+            additiveSynthesis.amplitudes[5] = _f5;
+            additiveSynthesis.paintWave();
         });
 
 

@@ -9,9 +9,9 @@ public class AdditiveSynthesis : MonoBehaviour
     public float[] amplitudes;
     public float[] newAmplitudes;
 
-    float Frequency = 480;
-    float Amplitude = 1.0f;
-    float Phase = 0.0f;
+    public float Frequency = 480;
+    public float Amplitude = 1.0f;
+    public float Phase = 0.0f;
 
     float t = 0;
     float timestep;
@@ -42,13 +42,18 @@ public class AdditiveSynthesis : MonoBehaviour
         {
             if (newAmplitudes[i] != amplitudes[i])
             {
-                float dif = newAmplitudes[i] - amplitudes[i];
+                float dif = Mathf.Abs(newAmplitudes[i] - amplitudes[i]);
+                //newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.01f);
                 if (dif >= 0.5)
                     newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.01f);
-                else if(dif >= 0.2)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.05f);
+                else if (dif >= 0.2)
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.02f);
                 else if (dif >= 0.1)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.1f);
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.02f);
+                else if (dif >= 0.05)
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.05f);
+                else
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.5f);
             }
         }
     }
@@ -58,7 +63,7 @@ public class AdditiveSynthesis : MonoBehaviour
         float j = 0;
         for (int i = 0; i < samples.Length; i++)
         {
-            samples2[i] = AddPartials(j, newAmplitudes);
+            samples2[i] = AddPartials(j, amplitudes);
 
             j += timestep;
         }
