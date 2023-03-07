@@ -13,7 +13,7 @@ public class Draw : MonoBehaviour
 
     void Start()
     {
-        samples = new float[200];
+        samples = new float[2048];
     }
 
     public Texture2D PaintWaveformSpectrum2(float[] samples, int width, int height, Color col, Color bgcol)

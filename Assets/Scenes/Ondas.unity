@@ -571,9 +571,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 923698706}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MaxValue: 1000
+  m_WholeNumbers: 1
+  m_Value: 1000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4428,11 +4428,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: amplitudes.Array.data[0]
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: amplitudes.Array.data[1]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: newAmplitudes.Array.data[0]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Name

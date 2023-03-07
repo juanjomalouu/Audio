@@ -7,6 +7,7 @@ public class ModifyCustomWave : MonoBehaviour
 {
     private GameObject audio;
     private AudioSource audioSource;
+    private AdditiveSynthesis additiveSynthesis;
     
     [SerializeField] private Slider _sliderF0;
     [SerializeField] private Slider _sliderF1;
@@ -21,6 +22,7 @@ public class ModifyCustomWave : MonoBehaviour
     {
         audio = GameObject.FindGameObjectWithTag("AudioSource");
         audioSource = audio.GetComponent<AudioSource>();
+        additiveSynthesis = audio.GetComponent<AdditiveSynthesis>();
 
         _f0 = _sliderF0.value;
         _f1 = _sliderF1.value;
@@ -31,21 +33,21 @@ public class ModifyCustomWave : MonoBehaviour
 
         _sliderF0.onValueChanged.AddListener((v) =>
         {
-            _f0 = v;
-            audio.GetComponent<AdditiveSynthesis>().amplitudes[0] = _f0;
-            audio.GetComponent<AdditiveSynthesis>().paintWave();
+            _f0 = v/1000;
+            additiveSynthesis.amplitudes[0] = _f0;
+            additiveSynthesis.paintWave();
         });
             
         _sliderF1.onValueChanged.AddListener((v) =>
         {
-            _f1 = v;
+            _f1 = v / 1000;
             audio.GetComponent<AdditiveSynthesis>().amplitudes[1] = _f1;
             audio.GetComponent<AdditiveSynthesis>().paintWave();
         });
 
         _sliderF2.onValueChanged.AddListener((v) =>
         {
-            _f2 = v;
+            _f2 = v / 1000;
             audio.GetComponent<AdditiveSynthesis>().amplitudes[2] = _f2;
             audio.GetComponent<AdditiveSynthesis>().paintWave();
         });
