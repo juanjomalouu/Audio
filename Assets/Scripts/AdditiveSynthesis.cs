@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AdditiveSynthesis : MonoBehaviour
 {
-    const int nPartials = 10; // Including f0
+    const int nPartials = 6; // Including f0
 
     public float[] amplitudes;
     public float[] newAmplitudes;
@@ -12,6 +12,7 @@ public class AdditiveSynthesis : MonoBehaviour
     public float Frequency = 480;
     public float Amplitude = 1.0f;
     public float Phase = 0.0f;
+    public float previousPhase = 0.0f;
 
     float t = 0;
     float timestep;
@@ -31,6 +32,7 @@ public class AdditiveSynthesis : MonoBehaviour
         samples2 = new float[2048];
         amplitudes = new float[nPartials];
         newAmplitudes = new float[nPartials];
+        previousPhase = Phase;
         draw = this.GetComponent<Draw>();
         timestep = 1.0f / AudioSettings.outputSampleRate;
         paintWave();
@@ -38,24 +40,7 @@ public class AdditiveSynthesis : MonoBehaviour
 
     private void Update()
     {
-        for(int i = 0; i < amplitudes.Length; i++)
-        {
-            if (newAmplitudes[i] != amplitudes[i])
-            {
-                float dif = Mathf.Abs(newAmplitudes[i] - amplitudes[i]);
-                //newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.01f);
-                if (dif >= 0.5)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.01f);
-                else if (dif >= 0.2)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.02f);
-                else if (dif >= 0.1)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.02f);
-                else if (dif >= 0.05)
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.05f);
-                else
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.5f);
-            }
-        }
+        
     }
 
     public void paintWave()
@@ -63,7 +48,7 @@ public class AdditiveSynthesis : MonoBehaviour
         float j = 0;
         for (int i = 0; i < samples.Length; i++)
         {
-            samples2[i] = AddPartials(j, amplitudes);
+            samples2[i] = AddPartials2(j, amplitudes);
 
             j += timestep;
         }
@@ -74,27 +59,58 @@ public class AdditiveSynthesis : MonoBehaviour
     private void OnAudioFilterRead(float[] data, int channels)
     {
         int nsamples = data.Length / channels;
-        double currentdsptime = AudioSettings.dspTime;
-
         for (int i = 0; i < nsamples; i += channels)
         {
-            samples[i]= AddPartials(t, newAmplitudes);
+            samples[i]= AddPartials(newAmplitudes);
             for (int j = 0; j < channels; j++)
             {
                 data[i * channels + j] = samples[i];
             }
-            t += timestep;
         }
     }
 
-    float AddPartials(float t, float[] newAmplitudes)
+    float AddPartials(float[] ampls)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
         float sample = 0.0f;
-
+        float increment = (Frequency * 2.0f * Mathf.PI) * timestep;
+        Phase += increment;
+        updateAmplitudes();
+        if (Phase > 2.0f * Mathf.PI) Phase -= 2.0f * Mathf.PI;
         for (int i = 0; i < nPartials; i++)
         {
-            float partialsample = partialAmplitude * newAmplitudes[i] * Mathf.Sin(2.0f * Mathf.PI * ((i + 1) * Frequency) * t + Phase);
+            float partialsample = partialAmplitude * ampls[i] * Mathf.Sin((i + 1) * Phase);
+            sample += partialsample;
+        }
+        return sample;
+    }
+
+    void updateAmplitudes()
+    {
+        for (int i = 0; i < amplitudes.Length; i++)
+        {
+            if (newAmplitudes[i] != amplitudes[i])
+            {
+                float dif = Mathf.Abs(newAmplitudes[i] - amplitudes[i]);
+                if (dif >= 0.5)
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.01f);
+                else if (dif >= 0.1)
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.02f);
+                else if (dif >= 0.05)
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.03f);
+                else
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.5f);
+            }
+        }
+    }
+
+    float AddPartials2(float t, float[] newAmplitudes)
+    {
+        float partialAmplitude = Amplitude / (float)nPartials;
+        float sample = 0.0f;
+        for (int i = 0; i < nPartials; i++)
+        {
+            float partialsample = partialAmplitude * newAmplitudes[i] * Mathf.Sin((i + 1) * (Frequency * 2.0f * Mathf.PI) * t);
             sample += partialsample;
         }
         return sample;
