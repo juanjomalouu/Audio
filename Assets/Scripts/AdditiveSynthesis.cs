@@ -1,52 +1,74 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using UnityEngine;
+using static System.Net.Mime.MediaTypeNames;
 
 public class AdditiveSynthesis : MonoBehaviour
 {
+    [SerializeField] Color waveformColor;
+    [SerializeField] Color bgColor;
+    public int width = 260;
+    public int height = 200;
+
     const int nPartials = 6; // Including f0
 
-    public float[] amplitudes;
+    public float[] amplitudes = new float[nPartials];
     public float[] newAmplitudes;
 
     public float Frequency = 480;
     public float Amplitude = 1.0f;
     public float Phase = 0.0f;
     public float previousPhase = 0.0f;
+    public float sampleRate;
 
     float t = 0;
     float timestep;
-
-    public int width = 260;
-    public int height = 200;
-    [SerializeField] Color waveformColor;
-    [SerializeField] Color bgColor;
     
     public float[] samples;
-    public float[] samples2;
+    
     Draw draw;
+
+    // Vocal tract
+    private int vocalFreq = 90;
+    private float vocalCordsAmp = 0.5f;
+    private float breathAmp = 0.5f;
+    bool playVocalCords = false;
+    bool playBreath = false;
+    private float currentSample = 0.0f;
+    private bool playingCustomTone = false;
+    private double currentDspTime;
+
+    // Custom tone
+    private AudioSource audioSource;
+    private double dataLen;     // the data length of each channel
+    private double chunkTime;
+    private double dspTimeStep;
+
+    //Convolution
+    [SerializeField] AudioClip p4impulse;
+    [SerializeField] AudioClip p4brir;
+    [SerializeField] AudioClip p4dry;
+    [SerializeField] AudioClip p4wet;
 
     private void Awake()
     {
         samples = new float[2048];
-        samples2 = new float[2048];
-        amplitudes = new float[nPartials];
         newAmplitudes = new float[nPartials];
         previousPhase = Phase;
         draw = this.GetComponent<Draw>();
-        timestep = 1.0f / AudioSettings.outputSampleRate;
-        paintWave();
-    }
-
-    private void Update()
-    {
-        
+        sampleRate = AudioSettings.outputSampleRate;
+        timestep = 1.0f / sampleRate;
+        audioSource = this.GetComponent<AudioSource>(); 
+        if(playingCustomTone)
+            paintWave();
     }
 
     public void paintWave()
     {
         float j = 0;
-        for (int i = 0; i < samples.Length; i++)
+        float[] samples2 = new float[2048];
+        for (int i = 0; i < samples2.Length; i++)
         {
             samples2[i] = AddPartials2(j, amplitudes);
 
@@ -58,13 +80,54 @@ public class AdditiveSynthesis : MonoBehaviour
 
     private void OnAudioFilterRead(float[] data, int channels)
     {
-        int nsamples = data.Length / channels;
-        for (int i = 0; i < nsamples; i += channels)
+        if(playingCustomTone)
         {
-            samples[i]= AddPartials(newAmplitudes);
-            for (int j = 0; j < channels; j++)
+            int nsamples = data.Length / channels;
+            for (int i = 0; i < nsamples; i += channels)
             {
-                data[i * channels + j] = samples[i];
+                samples[i] = AddPartials(newAmplitudes);
+                for (int j = 0; j < channels; j++)
+                {
+                    data[i * channels + j] = samples[i];
+                }
+            }
+        }
+        else
+        {
+            // DSP timing
+            currentDspTime = AudioSettings.dspTime;
+            dataLen = data.Length / channels;   // the actual data length for each channel
+            chunkTime = dataLen / sampleRate;   // the time that each chunk of data lasts
+            dspTimeStep = chunkTime / dataLen;  // the time of each dsp step. (the time that each individual audio sample (actually a float value) lasts)
+            if (playVocalCords)
+            {
+                double steps = sampleRate / vocalFreq;
+                double increment = vocalCordsAmp / steps;
+
+                // Calculate samples
+                double preciseDspTime;
+                for (int i = 0; i < dataLen; i++)
+                {
+                    preciseDspTime = currentDspTime + i * dspTimeStep;
+
+                    currentSample += (float)increment;
+                    if (currentSample >= vocalCordsAmp)
+                        currentSample = 0.0f;
+
+                    // Apply to both channels
+                    for (int j = 0; j < channels; j++)
+                    {
+                        data[i * channels + j] = currentSample;
+                    }
+                }
+            }
+            if(playBreath)
+            {
+                System.Random random = new System.Random();
+                for (int i = 0; i < data.Length; i++)
+                {
+                    data[i] += (float)random.NextDouble() * breathAmp;
+                }
             }
         }
     }
@@ -99,7 +162,7 @@ public class AdditiveSynthesis : MonoBehaviour
                 else if (dif >= 0.05)
                     newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.03f);
                 else
-                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.5f);
+                    newAmplitudes[i] = (float)Mathf.Lerp(newAmplitudes[i], amplitudes[i], 0.05f);
             }
         }
     }
@@ -114,5 +177,25 @@ public class AdditiveSynthesis : MonoBehaviour
             sample += partialsample;
         }
         return sample;
+    }
+
+    public void changeVocal()
+    {
+        audioSource.Play();
+        playVocalCords = !playVocalCords;
+    }
+    public void changeBreath()
+    {
+        GameObject newButton;
+        audioSource.Play();
+        playBreath = !playBreath;
+            
+    }
+
+    public void  StopVocals()
+    {
+        playBreath = false;
+        playVocalCords = false;
+        audioSource.Stop();
     }
 }

@@ -142,6 +142,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bae85c8019ae7e64b87e08c40de486db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  waveformColor: {r: 0.990566, g: 0.59603333, b: 0, a: 1}
+  bgColor: {r: 0.2830189, g: 0.26299396, b: 0.26299396, a: 1}
+  width: 200
+  height: 260
   amplitudes:
   - 1
   - 1
@@ -153,13 +157,14 @@ MonoBehaviour:
   - 0
   - 0
   - 0
-  width: 200
-  height: 260
-  waveformColor: {r: 0.990566, g: 0.59603333, b: 0, a: 1}
-  bgColor: {r: 0.2830189, g: 0.26299396, b: 0.26299396, a: 1}
-  sat: 25
+  newAmplitudes: []
+  Frequency: 480
+  Amplitude: 1
+  Phase: 0
+  previousPhase: 0
+  sampleRate: 0
   samples: []
-  finalSamples: []
+  samples2: []
 --- !u!114 &2810999208554712273
 MonoBehaviour:
   m_ObjectHideFlags: 0
