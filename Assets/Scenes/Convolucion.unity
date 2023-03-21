@@ -287,10 +287,12 @@ MonoBehaviour:
   previousPhase: 0
   sampleRate: 0
   samples: []
+  playingCustomTone: 0
   p4impulse: {fileID: 0}
   p4brir: {fileID: 0}
   p4dry: {fileID: 0}
   p4wet: {fileID: 0}
+  drawing: 0
 --- !u!1 &272449288
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,9 +377,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 146965835}
-        m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
-        m_MethodName: changeVocal
+      - m_Target: {fileID: 1768542017}
+        m_TargetAssemblyTypeName: ModifyCustomWave, Assembly-CSharp
+        m_MethodName: setPulseButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1097,6 +1099,7 @@ GameObject:
   - component: {fileID: 779124578}
   - component: {fileID: 779124577}
   - component: {fileID: 779124576}
+  - component: {fileID: 779124579}
   m_Layer: 5
   m_Name: Respuesta al Impulso
   m_TagString: Untagged
@@ -1169,9 +1172,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 146965835}
-        m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
-        m_MethodName: changeBreath
+      - m_Target: {fileID: 779124579}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1219,6 +1222,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779124573}
   m_CullTransparentMesh: 1
+--- !u!114 &779124579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779124573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 14548fb45e8d7f245919e6dac12472af, type: 3}
 --- !u!1 &885121050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1430,6 +1446,7 @@ GameObject:
   - component: {fileID: 1032270655}
   - component: {fileID: 1032270654}
   - component: {fileID: 1032270653}
+  - component: {fileID: 1032270656}
   m_Layer: 5
   m_Name: "Convoluci\xF3n"
   m_TagString: Untagged
@@ -1502,9 +1519,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 146965835}
-        m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
-        m_MethodName: StopVocals
+      - m_Target: {fileID: 1032270656}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1552,6 +1569,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1032270651}
   m_CullTransparentMesh: 1
+--- !u!114 &1032270656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032270651}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2fc693d0019f7d54486358b821bff5c3, type: 3}
 --- !u!1 &1045647626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1846,6 +1876,7 @@ GameObject:
   - component: {fileID: 1461258200}
   - component: {fileID: 1461258199}
   - component: {fileID: 1461258198}
+  - component: {fileID: 1461258201}
   m_Layer: 5
   m_Name: Audio Original
   m_TagString: Untagged
@@ -1918,9 +1949,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 146965835}
-        m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
-        m_MethodName: StopVocals
+      - m_Target: {fileID: 1461258201}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1968,6 +1999,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1461258195}
   m_CullTransparentMesh: 1
+--- !u!114 &1461258201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1461258195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: a93b0aa8c1d9a2046b2786e38a1a8a13, type: 3}
 --- !u!1 &1524616658
 GameObject:
   m_ObjectHideFlags: 0
@@ -2067,6 +2111,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768542015}
   - component: {fileID: 1768542016}
+  - component: {fileID: 1768542017}
   m_Layer: 5
   m_Name: Center
   m_TagString: Untagged
@@ -2125,6 +2170,21 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1768542017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1768542014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24723529ddb34104da0e75a62a30b5cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sliders: []
+  _f: []
+  isDrawing: 0
 --- !u!1001 &2810999208984143118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2182,6 +2242,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712273, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}

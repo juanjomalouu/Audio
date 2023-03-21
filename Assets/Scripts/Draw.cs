@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,10 +11,11 @@ public class Draw : MonoBehaviour
 
     public Image img;
     public float[] samples;
+    public int dif;
 
     void Start()
     {
-        samples = new float[2048];
+        samples = new float[1024];
     }
 
     public Texture2D PaintWaveformSpectrum2(float[] samples, int width, int height, Color col, Color bgcol)
@@ -22,6 +24,8 @@ public class Draw : MonoBehaviour
         float[] waveform = new float[samples.Length];
         int packSize = (samples.Length / width) + 1;
         int s = 0;
+        float multiplier = 1.0f;
+        int middle = height / 2;
         for (int i = 0; i < samples.Length; i += packSize)
         {
             waveform[i] = samples[i];
@@ -35,52 +39,24 @@ public class Draw : MonoBehaviour
                 tex.SetPixel(x, y, bgcol);
             }
         }
-
+        int diference = 0;
         for (int x = 0; x < waveform.Length; x++)
         {
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 337, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 338, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 339, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 340, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 341, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 342, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 343, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 344, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 345, col);
-
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 346, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 347, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 348, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 349, col);
-            
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 350, col);
-
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 351, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 352, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 353, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 354, col);
-
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 355, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 356, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 357, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 358, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 359, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 360, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 361, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 362, col);
-            tex.SetPixel(x, (int)(samples[x] * ((float)height) * 2) + 363, col);
-
-
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 96, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 97, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 98, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 99, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 100, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 101, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 102, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 103, col);
-            //tex.SetPixel(x, (int)(samples[x] * ((float)height) * 0.75f) + 104, col);
-            tex.SetPixel(x, 350, Color.white);
+            for(int j = middle - dif; j < middle + dif; j++)
+            {
+                if((int)(samples[x] * ((float)height) * multiplier) + j < height && (int)(samples[x] * ((float)height) * multiplier) + j > 0)
+                    tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j, col);
+                for (int l = 0; l < Mathf.Abs(diference); l++)
+                {
+                    if ((int)(samples[x] * ((float)height) * multiplier) + j - l < height && (int)(samples[x] * ((float)height) * multiplier) + j - l > 0)
+                        tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j - l, col);
+                    if ((int)(samples[x] * ((float)height) * multiplier) + j + l < height && (int)(samples[x] * ((float)height) * multiplier) + j + l > 0)
+                        tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j + l, col);
+                }
+            }
+            if (x!= 0)
+                diference = ((int)(samples[x] * ((float)height) * multiplier)) - ((int)(samples[x-1] * ((float)height) * multiplier));
+            tex.SetPixel(x, middle, Color.white);
         }
         tex.Apply();
 

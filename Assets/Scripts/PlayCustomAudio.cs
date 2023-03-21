@@ -9,13 +9,19 @@ public class PlayCustomAudio : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip audioClip;
 
-    [SerializeField] private Slider _sliderFrecuency;
+    [SerializeField] private Slider _sliderFrecuency = null;
     [SerializeField] private Slider _sliderAmplitude;
     [SerializeField] private Slider _sliderPhase;
 
     [SerializeField] private float _customFrecuency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
+    
+    private bool isRightHigher = false;
+    private bool isRightMuted = false;
+    private float beforeVolume;
+
+
     void Start()
     {
         _customAmplitude = 0.5f;
@@ -24,21 +30,30 @@ public class PlayCustomAudio : MonoBehaviour
 
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
 
-        _sliderAmplitude.onValueChanged.AddListener((v) =>
+        if(_sliderAmplitude != null)
         {
-            _customAmplitude = v;
-            audioSource.volume = _customAmplitude;
-        });
-        _sliderFrecuency.onValueChanged.AddListener((v) =>
+            _sliderAmplitude.onValueChanged.AddListener((v) =>
+            {
+                _customAmplitude = v;
+                audioSource.volume = _customAmplitude;
+            });
+        }
+        if (_sliderFrecuency != null)
         {
-            _customFrecuency = v;
-            audioSource.pitch = _customFrecuency;
-        });
-        _sliderPhase.onValueChanged.AddListener((v) =>
+            _sliderFrecuency.onValueChanged.AddListener((v) =>
+            {
+                _customFrecuency = v;
+                audioSource.pitch = _customFrecuency;
+            });
+        }
+        if (_sliderPhase != null)
         {
-            _customPhase = v;
-            audioSource.panStereo = _customPhase;
-        });
+            _sliderPhase.onValueChanged.AddListener((v) =>
+             {
+                 _customPhase = v;
+                 audioSource.panStereo = _customPhase;
+             });
+        }
     }
 
     public void playSoundEffect()
@@ -54,4 +69,53 @@ public class PlayCustomAudio : MonoBehaviour
             audioSource.Play();
         }
     }
+
+    public void playClip()
+    {
+        if (audioSource.clip != audioClip && audioSource.isPlaying)
+        {
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+        else if (audioSource.isPlaying)
+            audioSource.Stop();
+        else
+            audioSource.Play();
+    }
+
+    public void ResetPanStereo()
+    {
+        audioSource.panStereo = 0;
+    }
+    public void rightMuted()
+    {
+        if(audioSource.panStereo == -1 && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            audioSource.panStereo = -1;
+            audioSource.volume = 1.0f;
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+    }
+
+    public void rightHigher()
+    {
+        if (audioSource.panStereo == 0.5f && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+        else
+        {
+            audioSource.panStereo = 0.5f;
+            audioSource.volume = 1.0f;
+            audioSource.clip = audioClip;
+            audioSource.Play();
+        }
+    }
+
+
 }

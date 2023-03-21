@@ -11,9 +11,9 @@ public class AdditiveSynthesis : MonoBehaviour
     public int width = 260;
     public int height = 200;
 
-    const int nPartials = 6; // Including f0
+    const int nPartials = 12; // Including f0
 
-    public float[] amplitudes = new float[nPartials];
+    public float[] amplitudes;
     public float[] newAmplitudes;
 
     public float Frequency = 480;
@@ -36,7 +36,7 @@ public class AdditiveSynthesis : MonoBehaviour
     bool playVocalCords = false;
     bool playBreath = false;
     private float currentSample = 0.0f;
-    private bool playingCustomTone = false;
+    public bool playingCustomTone = false;
     private double currentDspTime;
 
     // Custom tone
@@ -51,31 +51,41 @@ public class AdditiveSynthesis : MonoBehaviour
     [SerializeField] AudioClip p4dry;
     [SerializeField] AudioClip p4wet;
 
+    public bool drawing = true;
+
+    private bool isRightMuted = false;
+    private bool isRightHigher = false;
+
     private void Awake()
     {
-        samples = new float[2048];
+        samples = new float[1024];
         newAmplitudes = new float[nPartials];
+        amplitudes = new float[nPartials];
+        amplitudes[0] = 1.0f;
         previousPhase = Phase;
         draw = this.GetComponent<Draw>();
         sampleRate = AudioSettings.outputSampleRate;
         timestep = 1.0f / sampleRate;
         audioSource = this.GetComponent<AudioSource>(); 
-        if(playingCustomTone)
-            paintWave();
+        paintWave();
     }
 
     public void paintWave()
     {
         float j = 0;
-        float[] samples2 = new float[2048];
+        float[] samples2 = new float[1024];
         for (int i = 0; i < samples2.Length; i++)
         {
             samples2[i] = AddPartials2(j, amplitudes);
 
             j += timestep;
         }
-        Texture2D texture = draw.PaintWaveformSpectrum2(samples2, width, height, waveformColor, bgColor);
-        draw.img.overrideSprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        if(drawing)
+        {
+            Debug.Log("Drawing");
+            Texture2D texture = draw.PaintWaveformSpectrum2(samples2, width, height, waveformColor, bgColor);
+            draw.img.overrideSprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
+        }
     }
 
     private void OnAudioFilterRead(float[] data, int channels)
@@ -167,13 +177,13 @@ public class AdditiveSynthesis : MonoBehaviour
         }
     }
 
-    float AddPartials2(float t, float[] newAmplitudes)
+    float AddPartials2(float t, float[] amps)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
         float sample = 0.0f;
         for (int i = 0; i < nPartials; i++)
         {
-            float partialsample = partialAmplitude * newAmplitudes[i] * Mathf.Sin((i + 1) * (Frequency * 2.0f * Mathf.PI) * t);
+            float partialsample = partialAmplitude * amps[i] * Mathf.Sin((i + 1) * (Frequency * 2.0f * Mathf.PI) * t);
             sample += partialsample;
         }
         return sample;
@@ -192,10 +202,15 @@ public class AdditiveSynthesis : MonoBehaviour
             
     }
 
-    public void  StopVocals()
+    public void StopVocals()
     {
         playBreath = false;
         playVocalCords = false;
         audioSource.Stop();
+    }
+
+    public void startAdditive()
+    {
+        playingCustomTone = !playingCustomTone;
     }
 }

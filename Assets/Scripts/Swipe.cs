@@ -20,9 +20,9 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
         string dragDirection = GetDragDirection(dragVectorDirection).ToString();
         if (dragDirection == "Left")
         {
-            if (sceneId + 1 >= SceneManager.sceneCountInBuildSettings)
+            if (sceneId + 1 == 8 || sceneId + 1 == 14)
             {
-                SceneManager.LoadScene(1);
+                SceneManager.LoadScene(0);
             }
             else
             {
@@ -31,7 +31,14 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
         }
         else if (dragDirection == "Right")
         {
+            if (sceneId - 1 == 7)
+            {
+                SceneManager.LoadScene(0);
+            }
+            else
+            {
                 SceneManager.LoadScene(sceneId - 1);
+            }
         }
     }
     public void OnDrag(PointerEventData eventData)

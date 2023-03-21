@@ -2,78 +2,187 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class ModifyCustomWave : MonoBehaviour
 {
     private GameObject audio;
     private AudioSource audioSource;
     private AdditiveSynthesis additiveSynthesis;
-    
-    [SerializeField] private Slider _sliderF0;
-    [SerializeField] private Slider _sliderF1;
-    [SerializeField] private Slider _sliderF2;
-    [SerializeField] private Slider _sliderF3;
-    [SerializeField] private Slider _sliderF4;
-    [SerializeField] private Slider _sliderF5;
 
-    private float _f0, _f1, _f2, _f3, _f4, _f5;
+    private static int _slidersCount = 12;
+    [SerializeField] private Slider[] _sliders;
+    [SerializeField] private float[] _f; 
+    [SerializeField] private bool isDrawing;
+    
+    //[SerializeField] private Slider _sliderF0;
+    //[SerializeField] private Slider _sliderF1;
+    //[SerializeField] private Slider _sliderF2;
+    //[SerializeField] private Slider _sliderF3;
+    //[SerializeField] private Slider _sliderF4;
+    //[SerializeField] private Slider _sliderF5;
+    //[SerializeField] private Slider _sliderF6;
+    //[SerializeField] private Slider _sliderF7;
+    //[SerializeField] private Slider _sliderF8;
+    //[SerializeField] private Slider _sliderF9;
+    //[SerializeField] private Slider _sliderF10;
+    //[SerializeField] private Slider _sliderF11;
+
+    //private float _f0, _f1, _f2, _f3, _f4, _f5, _f6, _f7, _f8, _f9, _f10, _f11;
 
     void Start()
     {
         audio = GameObject.FindGameObjectWithTag("AudioSource");
         audioSource = audio.GetComponent<AudioSource>();
         additiveSynthesis = audio.GetComponent<AdditiveSynthesis>();
-
-        _f0 = _sliderF0.value;
-        _f1 = _sliderF1.value;
-        _f2 = _sliderF2.value;
-        _f3 = _sliderF3.value;
-        _f4 = _sliderF4.value;
-        _f5 = _sliderF5.value;
-
-        _sliderF0.onValueChanged.AddListener((v) =>
+        if (isDrawing)
         {
-            _f0 = v/1000;
-            additiveSynthesis.amplitudes[0] = _f0;
-            additiveSynthesis.paintWave();
-        });
-            
-        _sliderF1.onValueChanged.AddListener((v) =>
-        {
-            _f1 = v / 1000;
-            additiveSynthesis.amplitudes[1] = _f1;
-            additiveSynthesis.paintWave();
-        });
 
-        _sliderF2.onValueChanged.AddListener((v) =>
-        {
-            _f2 = v / 1000;
-            additiveSynthesis.amplitudes[2] = _f2;
-            additiveSynthesis.paintWave();
-        });
+            for(int i = 0; i < _slidersCount; i++)
+            {
+                _f[i] = _sliders[i].value;
+            }
 
-        _sliderF3.onValueChanged.AddListener((v) =>
-        {
-            _f3 = v / 1000;
-            additiveSynthesis.amplitudes[3] = _f3;
-            additiveSynthesis.paintWave();
-        });
+            _sliders[0].onValueChanged.AddListener((v) =>
+            {
+                _f[0] = v / 1000;
+                additiveSynthesis.amplitudes[0] = _f[0];
+                additiveSynthesis.paintWave();
+            });
 
-        _sliderF4.onValueChanged.AddListener((v) =>
-        {
-            _f4 = v / 1000;
-            additiveSynthesis.amplitudes[4] = _f4;
-            additiveSynthesis.paintWave();
-        });
+            _sliders[1].onValueChanged.AddListener((v) =>
+            {
+                _f[1] = v / 1000;
+                additiveSynthesis.amplitudes[1] = _f[1];
+                additiveSynthesis.paintWave();
+            });
 
-        _sliderF5.onValueChanged.AddListener((v) =>
-        {
-            _f5 = v / 1000;
-            additiveSynthesis.amplitudes[5] = _f5;
-            additiveSynthesis.paintWave();
-        });
+            _sliders[2].onValueChanged.AddListener((v) =>
+            {
+                _f[2] = v / 1000;
+                additiveSynthesis.amplitudes[2] = _f[2];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[3].onValueChanged.AddListener((v) =>
+            {
+                _f[3] = v / 1000;
+                additiveSynthesis.amplitudes[3] = _f[3];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[4].onValueChanged.AddListener((v) =>
+            {
+                _f[4] = v / 1000;
+                additiveSynthesis.amplitudes[4] = _f[4];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[5].onValueChanged.AddListener((v) =>
+            {
+                _f[5] = v / 1000;
+                additiveSynthesis.amplitudes[5] = _f[5];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[6].onValueChanged.AddListener((v) =>
+            {
+                _f[6] = v / 1000;
+                additiveSynthesis.amplitudes[6] = _f[6];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[7].onValueChanged.AddListener((v) =>
+            {
+                _f[7] = v / 1000;
+                additiveSynthesis.amplitudes[7] = _f[7];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[8].onValueChanged.AddListener((v) =>
+            {
+                _f[8] = v / 1000;
+                additiveSynthesis.amplitudes[8] = _f[8];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[9].onValueChanged.AddListener((v) =>
+            {
+                _f[9] = v / 1000;
+                additiveSynthesis.amplitudes[9] = _f[9];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[10].onValueChanged.AddListener((v) =>
+            {
+                _f[10] = v / 1000;
+                additiveSynthesis.amplitudes[10] = _f[10];
+                additiveSynthesis.paintWave();
+            });
+
+            _sliders[11].onValueChanged.AddListener((v) =>
+            {
+                _f[11] = v / 1000;
+                additiveSynthesis.amplitudes[11] = _f[11];
+                additiveSynthesis.paintWave();
+            });
+        }
 
 
     }
 
+    public void setSinusWave()
+    {
+        _sliders[0].value = 1.0f * 1000;
+        for (int i = 1; i < additiveSynthesis.amplitudes.Length; i++)
+        {   
+            _sliders[i].value = 0.0f;
+        }
+    }
+
+    public void setSaw()
+    {
+        for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
+        {
+            float x = 1.0f / (i + 1);
+            _sliders[i].value = x * 1000;
+        }
+    }
+
+    public void setSquare()
+    {
+        for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
+        {
+            float x = 0.0f;
+            if (i % 2 == 0)
+                x = 1.0f / (i + 1);
+            _sliders[i].value = x * 1000;
+        }
+    }
+
+    public void setPulse()
+    { 
+        for(int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
+        {
+            float x = 0.3f;
+            _sliders[i].value = x * 1000;
+        }
+    }
+
+    public void setPulseButton()
+    {
+        if (additiveSynthesis.playingCustomTone)
+            additiveSynthesis.playingCustomTone = false;
+        else
+        {
+            for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
+            {
+                additiveSynthesis.drawing = isDrawing;
+                additiveSynthesis.playingCustomTone = true;
+                additiveSynthesis.amplitudes[i] = 0.3f;
+            }
+            audioSource.Play();
+        }
+    }
 }
