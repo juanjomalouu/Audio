@@ -8,12 +8,12 @@ public class PlayCustomAudio : MonoBehaviour
     // Start is called before the first frame update
     private AudioSource audioSource;
     public AudioClip audioClip;
-
-    [SerializeField] private Slider _sliderFrecuency = null;
+    private AdditiveSynthesis adSynthesis;
+    [SerializeField] private Slider _sliderFrecuency;
     [SerializeField] private Slider _sliderAmplitude;
     [SerializeField] private Slider _sliderPhase;
 
-    [SerializeField] private float _customFrecuency;
+    [SerializeField] private int _customFrecuency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
     
@@ -29,6 +29,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customPhase = 0;
 
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+        adSynthesis = audioSource.GetComponent<AdditiveSynthesis>();
 
         if(_sliderAmplitude != null)
         {
@@ -42,8 +43,8 @@ public class PlayCustomAudio : MonoBehaviour
         {
             _sliderFrecuency.onValueChanged.AddListener((v) =>
             {
-                _customFrecuency = v;
-                audioSource.pitch = _customFrecuency;
+                _customFrecuency = (int) v;
+                adSynthesis.Frequency = _customFrecuency;
             });
         }
         if (_sliderPhase != null)
@@ -51,7 +52,7 @@ public class PlayCustomAudio : MonoBehaviour
             _sliderPhase.onValueChanged.AddListener((v) =>
              {
                  _customPhase = v;
-                 audioSource.panStereo = _customPhase;
+                 adSynthesis.Phase += _customPhase;
              });
         }
     }
@@ -68,6 +69,12 @@ public class PlayCustomAudio : MonoBehaviour
             audioSource.clip = audioClip;
             audioSource.Play();
         }
+    }
+
+    public void PlayCustomAudioADSynthesis()
+    {
+        adSynthesis.playingCustomTone = !adSynthesis.playingCustomTone;
+        audioSource.clip = null;
     }
 
     public void playClip()

@@ -16,7 +16,7 @@ public class AdditiveSynthesis : MonoBehaviour
     public float[] amplitudes;
     public float[] newAmplitudes;
 
-    public float Frequency = 480;
+    public int Frequency = 480;
     public float Amplitude = 1.0f;
     public float Phase = 0.0f;
     public float previousPhase = 0.0f;
