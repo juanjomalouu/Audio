@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class PlayAudiosButtons : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip audioClip;
-
+    [SerializeField] private Slider slider;
     // Start is called before the first frame update
     void Start()
     {
+
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
     }
 
@@ -37,7 +40,7 @@ public class PlayAudiosButtons : MonoBehaviour
     }
     public void playSoundEffect()
     {
-        audioSource.volume = 1.0f;
+        audioSource.volume = slider.value;
         audioSource.panStereo = 0.0f;
         playSound();
         
@@ -45,13 +48,13 @@ public class PlayAudiosButtons : MonoBehaviour
 
     public void playLowAmplitudSound()
     {
-        audioSource.volume = 0.1f;
+        audioSource.volume = slider.value/10;
         playSound();
     }
 
     public void playHighAmplitudSound()
     {
-        audioSource.volume = 1.0f;
+        audioSource.volume = slider.value;
         playSound();
     }
     
@@ -65,10 +68,5 @@ public class PlayAudiosButtons : MonoBehaviour
     {
         audioSource.panStereo = 1.0f;
         playSound();
-    }
-
-    public void getSettingsVolume()
-    {
-        audioSource.volume = 1;
     }
 }

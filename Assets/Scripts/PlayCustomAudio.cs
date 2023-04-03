@@ -16,11 +16,8 @@ public class PlayCustomAudio : MonoBehaviour
     [SerializeField] private int _customFrecuency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
-    
-    private bool isRightHigher = false;
-    private bool isRightMuted = false;
-    private float beforeVolume;
 
+    [SerializeField] private Slider slider;
 
     void Start()
     {
@@ -37,6 +34,7 @@ public class PlayCustomAudio : MonoBehaviour
             {
                 _customAmplitude = v;
                 audioSource.volume = _customAmplitude;
+                slider.value = _customAmplitude;
             });
         }
         if (_sliderFrecuency != null)

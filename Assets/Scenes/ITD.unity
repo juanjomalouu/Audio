@@ -2131,6 +2131,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SliderVolume: {fileID: 1414668389}
+  _SliderVolume2: {fileID: 0}
 --- !u!114 &1414668389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2178,7 +2179,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []

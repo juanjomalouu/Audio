@@ -4303,6 +4303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SliderVolume: {fileID: 1013919017}
+  _SliderVolume2: {fileID: 0}
 --- !u!114 &1013919017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4350,7 +4351,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.25
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -9340,6 +9341,10 @@ PrefabInstance:
     - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: newAmplitudes.Array.data[0]
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_PlayOnAwake

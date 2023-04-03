@@ -7,18 +7,24 @@ using Slider = UnityEngine.UI.Slider;
 
 public class VolumeController : MonoBehaviour
 {
-    private AudioSource audioSource;
+    private AudioSource[] audioSources;
 
     [SerializeField] private Slider _SliderVolume = null;
+    [SerializeField] private Slider _SliderVolume2 = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+        audioSources = GameObject.FindGameObjectWithTag("AudioSource").GetComponents<AudioSource>();
 
         _SliderVolume.onValueChanged.AddListener((v) =>
         {
-            audioSource.volume = v;
+            foreach(AudioSource source in audioSources)
+            {
+                source.volume = v;
+            }
+            if(_SliderVolume2 != null)
+                _SliderVolume2.value = v;
         });
     }
 

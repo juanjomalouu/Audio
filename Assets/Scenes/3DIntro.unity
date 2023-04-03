@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 272449292}
   - component: {fileID: 272449291}
   - component: {fileID: 272449290}
+  - component: {fileID: 272449293}
   m_Layer: 5
   m_Name: R = 0
   m_TagString: Untagged
@@ -418,9 +419,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1768542017}
-        m_TargetAssemblyTypeName: PlayCustomAudio, Assembly-CSharp
-        m_MethodName: rightMuted
+      - m_Target: {fileID: 272449293}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -468,6 +469,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272449288}
   m_CullTransparentMesh: 1
+--- !u!114 &272449293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 272449288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 67d8b8fc54e649f47ade158e406814d5, type: 3}
 --- !u!1 &297861933
 GameObject:
   m_ObjectHideFlags: 0
@@ -1216,6 +1230,7 @@ GameObject:
   - component: {fileID: 779124578}
   - component: {fileID: 779124577}
   - component: {fileID: 779124576}
+  - component: {fileID: 779124579}
   m_Layer: 5
   m_Name: R > L
   m_TagString: Untagged
@@ -1288,9 +1303,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1768542017}
-        m_TargetAssemblyTypeName: PlayCustomAudio, Assembly-CSharp
-        m_MethodName: rightHigher
+      - m_Target: {fileID: 779124579}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1338,6 +1353,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 779124573}
   m_CullTransparentMesh: 1
+--- !u!114 &779124579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 779124573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 38c81faba2095834d8d5284a0462212c, type: 3}
 --- !u!1 &885121050
 GameObject:
   m_ObjectHideFlags: 0
@@ -2365,7 +2393,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1768542015}
   - component: {fileID: 1768542016}
-  - component: {fileID: 1768542017}
   m_Layer: 5
   m_Name: Center
   m_TagString: Untagged
@@ -2424,25 +2451,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &1768542017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1768542014}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29490eb2906210447bcb33a83cdff6d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: a93b0aa8c1d9a2046b2786e38a1a8a13, type: 3}
-  _sliderFrecuency: {fileID: 0}
-  _sliderAmplitude: {fileID: 0}
-  _sliderPhase: {fileID: 0}
-  _customFrecuency: 0
-  _customAmplitude: 0
-  _customPhase: 0
 --- !u!1 &2142896598
 GameObject:
   m_ObjectHideFlags: 0
@@ -2531,7 +2539,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2606,6 +2614,10 @@ PrefabInstance:
     - target: {fileID: 2810999208554712273, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Name

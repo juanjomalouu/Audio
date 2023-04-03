@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: d4245aa2218c9704b8bfd89e4e94c197, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &210566766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +420,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 75beec9ac1199a34d81e526dea9491f3, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!1 &295503088
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 2874389842e290942a92953209518cf2, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &311909386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,6 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 90cebf834806bf546a9694bfe444fc6c, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &356640883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,6 +1858,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: b03ffee24244cd84b91978fb4bb1fa97, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &764354075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2623,6 +2628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 058ca0f2cddcf5540a191b379d489737, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &1111049288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,6 +3415,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: b18f45964b0deb945ba7ca2dbf3508e1, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &1595647003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3803,7 +3810,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.25
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3861,6 +3868,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: fad4a6a4605589c4fb1bf1d24e58f3f5, type: 3}
+  slider: {fileID: 1953704040}
 --- !u!114 &2091389895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4017,6 +4025,10 @@ PrefabInstance:
     - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: m_Volume
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Name

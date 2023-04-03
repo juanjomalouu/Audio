@@ -16,13 +16,15 @@ public class PlayAudioClip : MonoBehaviour
     {
         audio = GameObject.FindGameObjectWithTag("AudioSource");
         audioSource = audio.GetComponent<AudioSource>();
+
         additiveSynthesis = audio.GetComponent<AdditiveSynthesis>();
     }
 
     // Update is called once per frame
     public void playClip()
     {
-        additiveSynthesis.playingCustomTone = false;
+        if(additiveSynthesis!= null)
+            additiveSynthesis.playingCustomTone = false;
         audioSource.panStereo = 0;
         if (audioSource.clip != audioClip)
         {

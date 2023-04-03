@@ -460,6 +460,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: bba37bfb0730f194890e2566d96b193f, type: 3}
+  slider: {fileID: 336664854}
 --- !u!1 &254883510
 GameObject:
   m_ObjectHideFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 058ca0f2cddcf5540a191b379d489737, type: 3}
+  slider: {fileID: 336664854}
 --- !u!1 &301375961
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SliderVolume: {fileID: 336664854}
+  _SliderVolume2: {fileID: 1348597840}
 --- !u!114 &336664854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -983,7 +986,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1175,6 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 53527ecec0009de4982baa8cf6f4b063, type: 3}
+  slider: {fileID: 336664854}
 --- !u!114 &356640883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2266,6 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: d5ec643fd0720064b8c1d4ea8614250d, type: 3}
+  slider: {fileID: 336664854}
 --- !u!114 &764354075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3240,7 +3245,7 @@ GameObject:
   - component: {fileID: 1348597839}
   - component: {fileID: 1348597840}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: Amplitud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4412,6 +4417,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 9bdef0ee1af7f9142a62fb78561b728f, type: 3}
+  slider: {fileID: 336664854}
 --- !u!1 &1873608631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4499,6 +4505,7 @@ MonoBehaviour:
   _customFrecuency: 0
   _customAmplitude: 0
   _customPhase: 0
+  slider: {fileID: 336664854}
 --- !u!1 &1939232069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
@@ -4544,7 +4551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1987863531}
   m_Layer: 0
-  m_Name: Slider1 (2)
+  m_Name: Amplitud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4654,7 +4661,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1990054076}
         m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playHighPhase
+        m_MethodName: playLowPhase
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4715,6 +4722,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 767a81ec52cd5be4e977d6130c68caa0, type: 3}
+  slider: {fileID: 336664854}
 --- !u!1 &2020828970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5199,6 +5207,10 @@ PrefabInstance:
     - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
       propertyPath: m_PlayOnAwake

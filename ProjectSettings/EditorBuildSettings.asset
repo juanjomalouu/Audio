@@ -9,9 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 7296d6807e30f1d4aa3a007cdd7e22f6
   - enabled: 1
-    path: Assets/Scenes/GroupSelector.unity
-    guid: 93933087296e8274d8ec247ea8a1773e
-  - enabled: 1
     path: Assets/Scenes/LevelSelectorAudio.unity
     guid: 7406075b6fcb6304587883c5fea0bf0e
   - enabled: 1

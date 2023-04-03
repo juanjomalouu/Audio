@@ -16,21 +16,6 @@ public class ModifyCustomWave : MonoBehaviour
     [SerializeField] private float[] _f; 
     [SerializeField] private bool isDrawing;
     
-    //[SerializeField] private Slider _sliderF0;
-    //[SerializeField] private Slider _sliderF1;
-    //[SerializeField] private Slider _sliderF2;
-    //[SerializeField] private Slider _sliderF3;
-    //[SerializeField] private Slider _sliderF4;
-    //[SerializeField] private Slider _sliderF5;
-    //[SerializeField] private Slider _sliderF6;
-    //[SerializeField] private Slider _sliderF7;
-    //[SerializeField] private Slider _sliderF8;
-    //[SerializeField] private Slider _sliderF9;
-    //[SerializeField] private Slider _sliderF10;
-    //[SerializeField] private Slider _sliderF11;
-
-    //private float _f0, _f1, _f2, _f3, _f4, _f5, _f6, _f7, _f8, _f9, _f10, _f11;
-
     void Start()
     {
         audio = GameObject.FindGameObjectWithTag("AudioSource");
