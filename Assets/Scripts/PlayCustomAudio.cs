@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,6 +35,7 @@ public class PlayCustomAudio : MonoBehaviour
             {
                 _customAmplitude = v;
                 audioSource.volume = _customAmplitude;
+                adSynthesis.Amplitude = _customAmplitude;
                 slider.value = _customAmplitude;
             });
         }
@@ -49,8 +51,8 @@ public class PlayCustomAudio : MonoBehaviour
         {
             _sliderPhase.onValueChanged.AddListener((v) =>
              {
-                 _customPhase = v;
-                 adSynthesis.Phase += _customPhase;
+                 _customPhase = v * 2;
+                 adSynthesis.phaseModification = _customPhase * Mathf.PI;
              });
         }
     }
@@ -92,35 +94,4 @@ public class PlayCustomAudio : MonoBehaviour
     {
         audioSource.panStereo = 0;
     }
-    public void rightMuted()
-    {
-        if(audioSource.panStereo == -1 && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-        else
-        {
-            audioSource.panStereo = -1;
-            audioSource.volume = 1.0f;
-            audioSource.clip = audioClip;
-            audioSource.Play();
-        }
-    }
-
-    public void rightHigher()
-    {
-        if (audioSource.panStereo == 0.5f && audioSource.isPlaying)
-        {
-            audioSource.Stop();
-        }
-        else
-        {
-            audioSource.panStereo = 0.5f;
-            audioSource.volume = 1.0f;
-            audioSource.clip = audioClip;
-            audioSource.Play();
-        }
-    }
-
-
 }

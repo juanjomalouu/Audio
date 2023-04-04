@@ -2317,7 +2317,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 764354074}
         m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playLowPhase
+        m_MethodName: playSoundEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3618,10 +3618,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 199585862}
   m_HandleRect: {fileID: 2052391933}
   m_Direction: 0
-  m_MinValue: -6.28
-  m_MaxValue: 6.28
-  m_WholeNumbers: 0
-  m_Value: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 1
+  m_Value: 50
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -4532,6 +4532,7 @@ MonoBehaviour:
   Frequency: 480
   Amplitude: 1
   Phase: 0
+  phaseModification: 0
   previousPhase: 0
   sampleRate: 0
   samples: []
@@ -4661,7 +4662,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1990054076}
         m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playLowPhase
+        m_MethodName: playSoundEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

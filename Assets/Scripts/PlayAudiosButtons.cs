@@ -10,11 +10,14 @@ public class PlayAudiosButtons : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip audioClip;
     [SerializeField] private Slider slider;
+    private AdditiveSynthesis adSynthesis;
     // Start is called before the first frame update
     void Start()
     {
 
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+        adSynthesis = audioSource.GetComponent<AdditiveSynthesis>();
+
     }
 
     private void playSound()
@@ -22,7 +25,6 @@ public class PlayAudiosButtons : MonoBehaviour
         audioSource.pitch = 1.0f;
         if (audioSource.clip != audioClip)
         {
-            //audioSource.Stop();
             audioSource.clip = audioClip;
             audioSource.Play();
         }
@@ -48,25 +50,15 @@ public class PlayAudiosButtons : MonoBehaviour
 
     public void playLowAmplitudSound()
     {
+        adSynthesis.playingCustomTone = false;
         audioSource.volume = slider.value/10;
         playSound();
     }
 
     public void playHighAmplitudSound()
     {
+        adSynthesis.playingCustomTone = false;
         audioSource.volume = slider.value;
-        playSound();
-    }
-    
-    public void playLowPhase()
-    {
-        audioSource.panStereo = 0.0f;
-        playSound();
-    }
-
-    public void playHighPhase()
-    {
-        audioSource.panStereo = 1.0f;
         playSound();
     }
 }

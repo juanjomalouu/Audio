@@ -19,6 +19,7 @@ public class AdditiveSynthesis : MonoBehaviour
     public int Frequency = 480;
     public float Amplitude = 1.0f;
     public float Phase = 0.0f;
+    public float phaseModification = 0.0f;
     public float previousPhase = 0.0f;
     public float sampleRate;
 
@@ -53,16 +54,12 @@ public class AdditiveSynthesis : MonoBehaviour
 
     public bool drawing = true;
 
-    private bool isRightMuted = false;
-    private bool isRightHigher = false;
-
     private void Awake()
     {
         samples = new float[1024];
         newAmplitudes = new float[nPartials];
         amplitudes = new float[nPartials];
         amplitudes[0] = 1.0f;
-        previousPhase = Phase;
         draw = this.GetComponent<Draw>();
         sampleRate = AudioSettings.outputSampleRate;
         timestep = 1.0f / sampleRate;
@@ -148,8 +145,9 @@ public class AdditiveSynthesis : MonoBehaviour
         float sample = 0.0f;
         float increment = (Frequency * 2.0f * Mathf.PI) * timestep;
         Phase += increment;
+        Phase += phaseModification;
         updateAmplitudes();
-        if (Phase > 2.0f * Mathf.PI) Phase -= 2.0f * Mathf.PI;
+        if (Phase > 2.0f * Mathf.PI) Phase %= 2.0f * Mathf.PI;
         for (int i = 0; i < nPartials; i++)
         {
             float partialsample = partialAmplitude * ampls[i] * Mathf.Sin((i + 1) * Phase);
