@@ -21,7 +21,7 @@ public class LPF : MonoBehaviour
         sampleRate = AudioSettings.outputSampleRate;
         audioLPF = GetComponent<AudioLowPassFilter>();
         audioLPF.cutoffFrequency = 0.5f * (float)sampleRate;
-        changeLPF(200);
+        changeLPF(2000);
 
         freqSlider.onValueChanged.AddListener((v) =>
         {
@@ -48,7 +48,12 @@ public class LPF : MonoBehaviour
         labelFreq.text = "Frecuencia de corte: " + v + "Hz";
 
         // Coarse approximation to distance based on cutoff
-        float distance = 15 + Mathf.Exp((20000 - v) * 0.0005f);
+        //float distance = 15 + Mathf.Exp((20000 - v) * 0.0005f);
+        float distance;
+        if (v == 20000)
+            distance = 0;
+        else
+            distance = Mathf.Exp((20000 - v) * 0.0005f);
         labelDistance.text = "Distancia: " + (int)distance + "m";
     }
 }

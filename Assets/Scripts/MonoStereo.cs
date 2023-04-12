@@ -38,6 +38,16 @@ public class MonoStereo : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if(!checkIsSomethingEnable())
+            for (int i = 0; i < audioSources.Length; i++)
+            {
+                audioSources[i].Stop();
+                audioSources[i].volume = 0;
+            }
+    }
+
     public void setMonoAudio()
     {
         if (!checkIsSomethingEnable())

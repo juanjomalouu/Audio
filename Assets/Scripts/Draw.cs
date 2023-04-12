@@ -42,20 +42,21 @@ public class Draw : MonoBehaviour
         int diference = 0;
         for (int x = 0; x < waveform.Length; x++)
         {
-            for(int j = middle - dif; j < middle + dif; j++)
+            int currentSample = (int)(samples[x] * ((float)height) * multiplier);
+            for (int j = middle - dif; j < middle + dif; j++)
             {
-                if((int)(samples[x] * ((float)height) * multiplier) + j < height && (int)(samples[x] * ((float)height) * multiplier) + j > 0)
-                    tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j, col);
+                if (currentSample + j < height && currentSample + j > 0)
+                    tex.SetPixel(x, currentSample + j, col);
                 for (int l = 0; l < Mathf.Abs(diference); l++)
                 {
-                    if ((int)(samples[x] * ((float)height) * multiplier) + j - l < height && (int)(samples[x] * ((float)height) * multiplier) + j - l > 0)
-                        tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j - l, col);
-                    if ((int)(samples[x] * ((float)height) * multiplier) + j + l < height && (int)(samples[x] * ((float)height) * multiplier) + j + l > 0)
-                        tex.SetPixel(x, (int)(samples[x] * ((float)height) * multiplier) + j + l, col);
+                    if (currentSample + j - l < height && currentSample + j - l > 0)
+                        tex.SetPixel(x, currentSample + j - l, col);
+                    if (currentSample + j + l < height && currentSample + j + l > 0)
+                        tex.SetPixel(x, currentSample + j + l, col);
                 }
             }
             if (x!= 0)
-                diference = ((int)(samples[x] * ((float)height) * multiplier)) - ((int)(samples[x-1] * ((float)height) * multiplier));
+                diference = (currentSample) - ((int)(samples[x-1] * ((float)height) * multiplier));
             tex.SetPixel(x, middle, Color.white);
         }
         tex.Apply();

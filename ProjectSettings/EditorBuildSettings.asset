@@ -44,4 +44,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reverb.unity
     guid: 4d204c25d7b125b4ebb46efb898f5949
+  - enabled: 1
+    path: Assets/Scenes/Sordera.unity
+    guid: 1d38726bedf44b44090f8d560c999a6c
   m_configObjects: {}
