@@ -766,7 +766,6 @@ SET PARAMETER: Downward smearing amount (in Hz) for left ear = 150
 SET PARAMETER: Downward smearing amount (in Hz) for right ear = 150
 SET PARAMETER: Upward smearing amount (in Hz) for left ear = 150
 SET PARAMETER: Upward smearing amount (in Hz) for right ear = 150
-<<<<<<< HEAD
 CREATE: HL Simulation plugin created
 SET PARAMETER: Hearing loss of band 0 for Left ear set to 81.000000 dBHL
 SET PARAMETER: Hearing loss of band 1 for Left ear set to 81.000000 dBHL
@@ -5603,5 +5602,3 @@ SET PARAMETER: Frequency smearing in left ear switched ON
 SET PARAMETER: Frequency smearing in right ear switched ON
 SET PARAMETER: Frequency smearing in left ear switched OFF
 SET PARAMETER: Frequency smearing in right ear switched OFF
-=======
->>>>>>> parent of c14175d (Ambisonics Update)

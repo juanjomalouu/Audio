@@ -836,6 +836,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 389231215}
   m_CullTransparentMesh: 1
+--- !u!82 &489849946 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82448026576576494, guid: 7649fb0a9057a44d7866d4c957ec7e96, type: 3}
+  m_PrefabInstance: {fileID: 1480578446}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2181,6 +2186,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114288366561057026, guid: 7649fb0a9057a44d7866d4c957ec7e96, type: 3}
+      propertyPath: gainDb
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7649fb0a9057a44d7866d4c957ec7e96, type: 3}
 --- !u!1 &1524616658
@@ -2567,6 +2576,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _SliderVolume: {fileID: 1953704040}
   mixer: {fileID: 24100000, guid: 248799cb4acba48f7b3ee842a80f788c, type: 2}
+  audioSource: {fileID: 489849946}
 --- !u!114 &1953704040
 MonoBehaviour:
   m_ObjectHideFlags: 0
