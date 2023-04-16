@@ -10,11 +10,13 @@ public class Reverb : MonoBehaviour
     public bool isDirect = false;
     private bool isEarly = false;
     private bool isTail = false;
+    [SerializeField] AudioClip clip;
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         audioSource = GetComponent<AudioSource>();
         audioReverb = GetComponent<AudioReverbFilter>();
+        audioSource.clip = clip;
         audioReverb.dryLevel = -10000;
     }
 

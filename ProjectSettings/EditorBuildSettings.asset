@@ -15,10 +15,10 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelector3D.unity
     guid: dfdd0d542dd24754999eda6b602805bd
   - enabled: 1
-    path: Assets/Scenes/Botones.unity
+    path: Assets/Scenes/2DIntro.unity
     guid: fd5c341f4089fd54f82865b92363cdbd
   - enabled: 1
-    path: Assets/Scenes/ExampleSounds.unity
+    path: Assets/Scenes/CustomAudio.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Ondas.unity
@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Reverb.unity
     guid: 4d204c25d7b125b4ebb46efb898f5949
+  - enabled: 1
+    path: Assets/Scenes/Ambisonics.unity
+    guid: 4d29c3bfd7b44d0448ff7bafc0c55d09
   - enabled: 1
     path: Assets/Scenes/Sordera.unity
     guid: 1d38726bedf44b44090f8d560c999a6c

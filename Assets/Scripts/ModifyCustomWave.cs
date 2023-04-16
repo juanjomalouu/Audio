@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -150,24 +151,38 @@ public class ModifyCustomWave : MonoBehaviour
     { 
         for(int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
         {
-            float x = 0.3f;
-            _sliders[i].value = x * 1000;
+            additiveSynthesis.amplitudes[i] = 0.3f;
+            try
+            {
+                _sliders[i].value = 0.3f * 1000;
+            }
+            catch(Exception ex)
+            {
+                Debug.Log("");
+            }
         }
     }
 
     public void setPulseButton()
     {
         if (additiveSynthesis.playingCustomTone)
-            additiveSynthesis.playingCustomTone = false;
+            additiveSynthesis.setAdditiveEnable(false);
         else
         {
-            for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
-            {
-                additiveSynthesis.drawing = isDrawing;
-                additiveSynthesis.playingCustomTone = true;
-                additiveSynthesis.amplitudes[i] = 0.3f;
-            }
+            additiveSynthesis.setAdditiveEnable(true);
+            additiveSynthesis.drawing = isDrawing;
+            setPulse();
             audioSource.Play();
+            StartCoroutine(waiter());
         }
+    }
+
+    //Corutina para hacer que el impulso dure 0.1 segundos
+    IEnumerator waiter()
+    {
+        Debug.Log("Entró");
+        yield return new WaitForSeconds(0.1f);
+        additiveSynthesis.setAdditiveEnable(false);
+        audioSource.Stop();
     }
 }

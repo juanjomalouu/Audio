@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 210566768}
   - component: {fileID: 210566767}
   - component: {fileID: 210566766}
-  - component: {fileID: 210566765}
+  - component: {fileID: 210566769}
   m_Layer: 5
   m_Name: "Variaci\xF3nTimbre"
   m_TagString: Untagged
@@ -164,20 +164,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &210566765
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210566763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: d4245aa2218c9704b8bfd89e4e94c197, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &210566766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -222,9 +208,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 210566765}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 210566769}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -272,6 +258,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210566763}
   m_CullTransparentMesh: 1
+--- !u!114 &210566769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210566763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: d4245aa2218c9704b8bfd89e4e94c197, type: 3}
 --- !u!1 &272449288
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,8 +357,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 272449293}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -416,11 +415,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 272449288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 75beec9ac1199a34d81e526dea9491f3, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!1 &295503088
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,7 +496,7 @@ GameObject:
   - component: {fileID: 311909388}
   - component: {fileID: 311909387}
   - component: {fileID: 311909386}
-  - component: {fileID: 311909385}
+  - component: {fileID: 311909389}
   m_Layer: 5
   m_Name: SonidoOriginal
   m_TagString: Untagged
@@ -527,20 +525,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &311909385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311909383}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 2874389842e290942a92953209518cf2, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &311909386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -585,9 +569,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 311909385}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 311909389}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -635,6 +619,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311909383}
   m_CullTransparentMesh: 1
+--- !u!114 &311909389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 311909383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 2874389842e290942a92953209518cf2, type: 3}
 --- !u!1 &332586754
 GameObject:
   m_ObjectHideFlags: 0
@@ -794,7 +791,7 @@ GameObject:
   - component: {fileID: 356640885}
   - component: {fileID: 356640884}
   - component: {fileID: 356640883}
-  - component: {fileID: 356640882}
+  - component: {fileID: 356640886}
   m_Layer: 5
   m_Name: "SonidoArm\xF3nico"
   m_TagString: Untagged
@@ -823,20 +820,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &356640882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356640880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 90cebf834806bf546a9694bfe444fc6c, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &356640883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -881,9 +864,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 356640882}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 356640886}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -931,6 +914,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356640880}
   m_CullTransparentMesh: 1
+--- !u!114 &356640886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 356640880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 90cebf834806bf546a9694bfe444fc6c, type: 3}
 --- !u!1 &389231215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1736,6 +1732,134 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 656894210}
   m_CullTransparentMesh: 1
+--- !u!1 &715762139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 715762142}
+  - component: {fileID: 715762141}
+  m_Layer: 0
+  m_Name: Audio Source
+  m_TagString: AudioSource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &715762141
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715762139}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 9a28aa773900bce45aa5719138a2925d, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &715762142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715762139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 10, y: 1, z: 10}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &747633222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1816,7 +1940,7 @@ GameObject:
   - component: {fileID: 764354077}
   - component: {fileID: 764354076}
   - component: {fileID: 764354075}
-  - component: {fileID: 764354074}
+  - component: {fileID: 764354078}
   m_Layer: 5
   m_Name: SonidoComplejo
   m_TagString: Untagged
@@ -1845,20 +1969,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &764354074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764354072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b03ffee24244cd84b91978fb4bb1fa97, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &764354075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1903,9 +2013,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 764354074}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 764354078}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1953,6 +2063,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764354072}
   m_CullTransparentMesh: 1
+--- !u!114 &764354078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 764354072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: b03ffee24244cd84b91978fb4bb1fa97, type: 3}
 --- !u!1 &865847393
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,7 +2709,7 @@ GameObject:
   - component: {fileID: 1111049290}
   - component: {fileID: 1111049289}
   - component: {fileID: 1111049288}
-  - component: {fileID: 1111049287}
+  - component: {fileID: 1111049291}
   m_Layer: 5
   m_Name: SonidoOriginal
   m_TagString: Untagged
@@ -2615,20 +2738,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1111049287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1111049285}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 058ca0f2cddcf5540a191b379d489737, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &1111049288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2673,9 +2782,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1111049287}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 1111049291}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2723,6 +2832,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111049285}
   m_CullTransparentMesh: 1
+--- !u!114 &1111049291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1111049285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: bba37bfb0730f194890e2566d96b193f, type: 3}
 --- !u!1 &1130446154
 GameObject:
   m_ObjectHideFlags: 0
@@ -3373,7 +3495,7 @@ GameObject:
   - component: {fileID: 1595647005}
   - component: {fileID: 1595647004}
   - component: {fileID: 1595647003}
-  - component: {fileID: 1595647002}
+  - component: {fileID: 1595647006}
   m_Layer: 5
   m_Name: SonidoConVariacion
   m_TagString: Untagged
@@ -3402,20 +3524,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1595647002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1595647000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b18f45964b0deb945ba7ca2dbf3508e1, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &1595647003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3460,9 +3568,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1595647002}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 1595647006}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3510,6 +3618,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1595647000}
   m_CullTransparentMesh: 1
+--- !u!114 &1595647006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1595647000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: b18f45964b0deb945ba7ca2dbf3508e1, type: 3}
 --- !u!1 &1739264097
 GameObject:
   m_ObjectHideFlags: 0
@@ -3763,6 +3884,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _SliderVolume: {fileID: 1953704040}
+  mixer: {fileID: 24100000, guid: 9a28aa773900bce45aa5719138a2925d, type: 2}
+  audioSource: {fileID: 0}
 --- !u!114 &1953704040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3807,10 +3930,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1385094990}
   m_HandleRect: {fileID: 556282704}
   m_Direction: 0
-  m_MinValue: 0
-  m_MaxValue: 1
+  m_MinValue: 0.0001
+  m_MaxValue: 2
   m_WholeNumbers: 0
-  m_Value: 0.25
+  m_Value: 0.5
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -3826,7 +3949,7 @@ GameObject:
   - component: {fileID: 2091389897}
   - component: {fileID: 2091389896}
   - component: {fileID: 2091389895}
-  - component: {fileID: 2091389894}
+  - component: {fileID: 2091389898}
   m_Layer: 5
   m_Name: "Variaci\xF3nAmplitud"
   m_TagString: Untagged
@@ -3855,20 +3978,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2091389894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091389892}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: fad4a6a4605589c4fb1bf1d24e58f3f5, type: 3}
-  slider: {fileID: 1953704040}
 --- !u!114 &2091389895
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3913,9 +4022,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2091389894}
-        m_TargetAssemblyTypeName: PlayAudiosButtons, Assembly-CSharp
-        m_MethodName: playSoundEffect
+      - m_Target: {fileID: 2091389898}
+        m_TargetAssemblyTypeName: PlayAudioClip, Assembly-CSharp
+        m_MethodName: playClip
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3963,82 +4072,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091389892}
   m_CullTransparentMesh: 1
---- !u!1001 &2810999208984143118
-PrefabInstance:
+--- !u!114 &2091389898
+MonoBehaviour:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712272, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712273, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: img
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712273, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712275, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_Volume
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_Name
-      value: Audio Source
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810999208554712277, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-      propertyPath: m_TagString
-      value: AudioSource
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 2810999208554712274, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-    - {fileID: 2810999208554712273, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 7f119e5dab815834ab8a40b3726dacee, type: 3}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091389892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: fad4a6a4605589c4fb1bf1d24e58f3f5, type: 3}

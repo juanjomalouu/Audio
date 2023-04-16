@@ -22,6 +22,7 @@ public class PlayAudiosButtons : MonoBehaviour
 
     private void playSound()
     {
+        adSynthesis.setAdditiveEnable(false);
         audioSource.pitch = 1.0f;
         if (audioSource.clip != audioClip)
         {
@@ -45,19 +46,18 @@ public class PlayAudiosButtons : MonoBehaviour
         audioSource.volume = slider.value;
         audioSource.panStereo = 0.0f;
         playSound();
-        
     }
 
     public void playLowAmplitudSound()
     {
-        adSynthesis.playingCustomTone = false;
+        adSynthesis.setAdditiveEnable(false);
         audioSource.volume = slider.value/10;
         playSound();
     }
 
     public void playHighAmplitudSound()
     {
-        adSynthesis.playingCustomTone = false;
+        adSynthesis.setAdditiveEnable(false);
         audioSource.volume = slider.value;
         playSound();
     }

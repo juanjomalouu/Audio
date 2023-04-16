@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using Unity.VisualScripting;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -207,7 +208,15 @@ public class AdditiveSynthesis : MonoBehaviour
         audioSource.Stop();
     }
 
-    public void startAdditive()
+    public void setAdditiveEnable(bool isEnable)
+    {
+        if(!playingCustomTone)
+        {
+            audioSource.clip = null;
+        }
+        playingCustomTone = isEnable;
+    }
+    public void toggleAdditive()
     {
         playingCustomTone = !playingCustomTone;
     }

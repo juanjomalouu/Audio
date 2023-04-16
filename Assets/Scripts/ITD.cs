@@ -11,12 +11,12 @@ public class ITD : MonoBehaviour
 {
 
     public bool playingITD = false;
-    private float sampleRate;
+    public float sampleRate;
     public float ITDToneFreq = 200;
     public float newFrequency = 200;
-    private float ITDRightPhase = 0;
-    private float ITDDelay = 0;
-    private float ITDToneAmp = 0.01f;
+    public float ITDRightPhase = 0;
+    public float ITDDelay = 0;
+    public float ITDToneAmp = 0.01f;
 
     [SerializeField] TextMeshProUGUI labelFreqP1;
     [SerializeField] TextMeshProUGUI labelAngleP1;
@@ -86,22 +86,6 @@ public class ITD : MonoBehaviour
     {
         ITDDelay = v;
         computeITDPhase();
-    }
-
-    void updateFrequency()
-    {
-        if(newFrequency != ITDToneFreq)
-        {
-            float dif = Math.Abs(newFrequency - ITDToneFreq);
-            if(dif >= 1500)
-                newFrequency = (float)Mathf.Lerp(newFrequency, ITDToneFreq, 0.01f);
-            else if (dif >= 1000)
-                newFrequency = (float)Mathf.Lerp(newFrequency, ITDToneFreq, 0.02f);
-            else if (dif >= 500)
-                newFrequency = (float)Mathf.Lerp(newFrequency, ITDToneFreq, 0.03f);
-            else
-                newFrequency = (float)Mathf.Lerp(newFrequency, ITDToneFreq, 0.05f);
-        }
     }
 
     private void computeITDPhase()

@@ -9,9 +9,18 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
     // Start is called before the first frame update
     private int sceneId;
 
+    private AudioSource audioSource;
+
     private Vector2 startTouchPosition;
     private Vector2 endTouchPosition;
     private Vector3 panelLocation;
+
+    void Awake()
+    {
+        audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+        audioSource.clip = null;
+    }
+
 
     public void OnEndDrag(PointerEventData eventData)
     {
@@ -20,7 +29,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
         string dragDirection = GetDragDirection(dragVectorDirection).ToString();
         if (dragDirection == "Left")
         {
-            if (sceneId + 1 == 7 || sceneId + 1 == 12 || sceneId + 1 == 14)
+            if (sceneId + 1 == 7 || sceneId + 1 == 14 || sceneId + 1 == 15)
             {
                 SceneManager.LoadScene(0);
             }
@@ -31,7 +40,7 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
         }
         else if (dragDirection == "Right")
         {
-            if (sceneId - 1 == 7 || sceneId - 1 == 12 || sceneId - 1 == 3)
+            if (sceneId - 1 == 6 || sceneId - 1 == 13 || sceneId - 1 == 2)
             {
                 SceneManager.LoadScene(0);
             }

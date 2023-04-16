@@ -16,116 +16,38 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 4ad0cee9d5bfc504eb48b50a2f88c279
-    name: HA3DTI_Gain_Level_0_Band_0_Right
-  - guid: 7b3b691359a58c740891bc10a177b354
-    name: HA3DTI_Threshold_1_Left
-  - guid: 77a83b88a7eeecd42b5b25ca84a1b38d
-    name: HA3DTI_Gain_Level_0_Band_6_Right
-  - guid: f20983dbbe8e8074cbbf66784f798938
-    name: HA3DTI_Gain_Level_2_Band_5_Left
-  - guid: 595b32669d45a104781a1fa54c2667cf
-    name: HA3DTI_Gain_Level_2_Band_1_Left
-  - guid: a8c9612d5919f5445869280e65ff9551
-    name: HA3DTI_Gain_Level_1_Band_3_Right
-  - guid: f34876b2d537bfb4284153db5b1ff220
-    name: HA3DTI_Limiter_On
-  - guid: caf9bf41bdb8aba49b7229cd2e5963aa
-    name: HA3DTI_Gain_Level_0_Band_1_Left
-  - guid: 3bdd0cddeae820946acc10e144014830
-    name: HA3DTI_Compression_Left
-  - guid: f595ca26dca86aa4cb5ea412e971f153
-    name: HA3DTI_Gain_Level_1_Band_6_Left
-  - guid: 673a98b37fa5c4f48bd6a19d19dcdf5f
-    name: HA3DTI_Gain_Level_1_Band_0_Left
-  - guid: 3ed8ab48d91371f4e845bfe054271f79
-    name: HA3DTI_Gain_Level_0_Band_5_Left
-  - guid: d860865c5706df24b8f5f531c49bcfa4
-    name: HA3DTI_Gain_Level_1_Band_4_Left
-  - guid: c39751511309f8a4b90114d16b3a2910
-    name: HA3DTI_Process_LeftOn
-  - guid: 036b70eb5e5101d44a61bc8a7339cf1f
-    name: HA3DTI_NoiseBits
-  - guid: d3fc0f4e6b1bf2c4a9b94ae6938e082d
-    name: HA3DTI_Gain_Level_0_Band_4_Right
-  - guid: 26f747a488b52d442ad55a46e30c20d8
-    name: HA3DTI_Gain_Level_2_Band_3_Left
-  - guid: 8487a293de34bb54182163e56dc2ced8
-    name: HA3DTI_Threshold_2_Right
-  - guid: 7897e5164339d3648b83047509402ba1
-    name: HA3DTI_Gain_Level_1_Band_2_Left
-  - guid: 8872c47f05dc6ed488c517ee45e87a9e
-    name: HA3DTI_Volume_Right
-  - guid: 3a3fc15eaa93a23498deb7072c054dc0
-    name: HA3DTI_Normalization_DB_Left
-  - guid: b7f88a1c95f8a4a4597976f1bd2eecbc
-    name: HA3DTI_Normalization_RightOn
-  - guid: 7dfb1d3029878514a9b030e2b5603fea
-    name: HA3DTI_Normalization_Get_Right
-  - guid: 4d9b3333d54ba624c8f00c676ecd2d54
-    name: HA3DTI_Gain_Level_2_Band_2_Right
-  - guid: 7bdffc9c0378dfd49a31d2e6a8be65a7
-    name: HA3DTI_Tone_Mid_Right
-  - guid: 1112fe27df5f4e14c876679bb95133b4
-    name: HA3DTI_Tone_Low_Left
-  - guid: 45a40dd2fbb3c0e47b872ef3384d4778
-    name: HA3DTI_Tone_High_Left
-  - guid: 47ab3e91cfcac4e41a915612e59a9649
-    name: HA3DTI_AttackRelease_Right
-  - guid: dde2a4b95609795408469d379bb1b3e4
-    name: HA3DTI_Gain_Level_1_Band_1_Right
-  - guid: 3e367aa8a4fb6674e959e3df12054c15
-    name: HA3DTI_Gain_Level_0_Band_2_Right
-  - guid: 8dd47cb4ca64f3642b2281d31a505760
-    name: HA3DTI_Gain_Level_2_Band_4_Right
-  - guid: 2102c837277715c4b929ad6564956744
-    name: HA3DTI_Gain_Level_2_Band_0_Right
-  - guid: 023674cdf8716aa44a1751591561588e
-    name: HA3DTI_Gain_Level_2_Band_2_Left
-  - guid: 28cbcecafd4208f4b900c8c66ef86d86
-    name: HA3DTI_Gain_Level_0_Band_3_Left
-  - guid: 8fd6901400191f54bbb8c088b281b472
-    name: HA3DTI_Gain_Level_1_Band_5_Right
-  - guid: 136448d0d70e0c544b5d0c82fbf407bb
-    name: HA3DTI_Threshold_0_Right
-  - guid: 4b2ce22f63ee5c144876960dc869f15c
-    name: HA3DTI_NoiseAfter_On
-  - guid: 8e2cbd80414cde34eb0baec0db07b024
-    name: HA3DTI_Gain_Level_2_Band_6_Right
-  - guid: 6ee62f81c4683fa408c51e16118ac633
-    name: HA3DTI_Gain_Level_2_Band_5_Right
-  - guid: 54b73c6e134aac247a2d45aecd61fa07
-    name: HA3DTI_Gain_Level_1_Band_1_Left
-  - guid: 3f4942121342bec45a878656c25772cb
-    name: HA3DTI_Threshold_2_Left
-  - guid: b3b1ef9adc6cad74caf0807b2d2ec781
-    name: HA3DTI_Gain_Level_2_Band_3_Right
-  - guid: 4722b2f6419fc1b42b53db70b6c5bad8
-    name: HA3DTI_Threshold_0_Left
-  - guid: aede12977b5d5364b93bd565678a189e
-    name: HA3DTI_Gain_Level_0_Band_3_Right
-  - guid: fae99e7ec1297bf498a07b0c622fab20
-    name: HA3DTI_Gain_Level_1_Band_6_Right
-  - guid: 9b1a05d24f8cb104596272c9e8629c05
-    name: HA3DTI_Volume_Left
-  - guid: ba3499114b43b2d49a5f906d383d4edc
-    name: HA3DTI_Threshold_1_Right
-  - guid: 15281508d45a07e449d0bcc19354ee33
-    name: HA3DTI_Gain_Level_1_Band_5_Left
-  - guid: 88558ef82d271ae47a0e1a62ba8dd701
-    name: HA3DTI_Process_RightOn
-  - guid: 4395774b6a7122f449b9be4b15354550
-    name: HA3DTI_HPF_Cutoff
-  - guid: f7d18904a3c439e478e0736fc3b44779
-    name: HA3DTI_Gain_Level_0_Band_0_Left
-  - guid: fe06b63c04aee4e478e02454911300ec
-    name: HA3DTI_Gain_Level_2_Band_6_Left
-  - guid: 2280a70abc4c5f842a696601557bc4a7
-    name: HA3DTI_Gain_Level_0_Band_4_Left
-  - guid: c7b33f60104293e4fb352d29ef8c2b3a
-    name: HA3DTI_Gain_Level_1_Band_2_Right
+  - guid: 9a04031e9aeb6984a9d578735e993ba3
+    name: exposedVolumeParam
   - guid: a1caf348527f67e47ad9fb6a16bfa44a
     name: HA3DTI_Gain_Level_0_Band_6_Left
+  - guid: c7b33f60104293e4fb352d29ef8c2b3a
+    name: HA3DTI_Gain_Level_1_Band_2_Right
+  - guid: 2280a70abc4c5f842a696601557bc4a7
+    name: HA3DTI_Gain_Level_0_Band_4_Left
+  - guid: fe06b63c04aee4e478e02454911300ec
+    name: HA3DTI_Gain_Level_2_Band_6_Left
+  - guid: f7d18904a3c439e478e0736fc3b44779
+    name: HA3DTI_Gain_Level_0_Band_0_Left
+  - guid: 4395774b6a7122f449b9be4b15354550
+    name: HA3DTI_HPF_Cutoff
+  - guid: 88558ef82d271ae47a0e1a62ba8dd701
+    name: HA3DTI_Process_RightOn
+  - guid: 15281508d45a07e449d0bcc19354ee33
+    name: HA3DTI_Gain_Level_1_Band_5_Left
+  - guid: ba3499114b43b2d49a5f906d383d4edc
+    name: HA3DTI_Threshold_1_Right
+  - guid: 9b1a05d24f8cb104596272c9e8629c05
+    name: HA3DTI_Volume_Left
+  - guid: fae99e7ec1297bf498a07b0c622fab20
+    name: HA3DTI_Gain_Level_1_Band_6_Right
+  - guid: aede12977b5d5364b93bd565678a189e
+    name: HA3DTI_Gain_Level_0_Band_3_Right
+  - guid: 4722b2f6419fc1b42b53db70b6c5bad8
+    name: HA3DTI_Threshold_0_Left
+  - guid: b3b1ef9adc6cad74caf0807b2d2ec781
+    name: HA3DTI_Gain_Level_2_Band_3_Right
+  - guid: 3f4942121342bec45a878656c25772cb
+    name: HA3DTI_Threshold_2_Left
   - guid: 9e06da1aff7be64478b5e1088305cf53
     name: HA3DTI_Compression_Right
   - guid: cb5c75823d24514419ea718f5bdbdd00
@@ -134,40 +56,174 @@ AudioMixerController:
     name: HA3DTI_Gain_Level_1_Band_3_Left
   - guid: bca5d5f4b38c1c44382cd84467a74e4a
     name: HA3DTI_AttackRelease_Left
-  - guid: 99d9527a835c86c4091e7c19bc5134d0
-    name: HA3DTI_Interpolation_On
-  - guid: 90fd40bc090832d4eb014342fc2ecff5
-    name: HA3DTI_Gain_Level_2_Band_0_Left
-  - guid: e7465563f79af5a47bd56160c1080ace
-    name: HA3DTI_Gain_Level_0_Band_2_Left
-  - guid: 356594f2d1fac6841a1ae71d178ac855
-    name: HA3DTI_LPF_Cutoff
-  - guid: e2243e475fb7a984eb1ba1e1aca74118
-    name: HA3DTI_Gain_Level_1_Band_0_Right
-  - guid: a4a64b56e99906245aa3d43a67bc6985
-    name: HA3DTI_Gain_Level_0_Band_1_Right
-  - guid: e579645981b51214c80291b6f601a8b4
-    name: HA3DTI_Gain_Level_2_Band_1_Right
-  - guid: da57513faaf906642bf7c2a7ab15f3b2
-    name: HA3DTI_Normalization_Get_Left
-  - guid: 16bfbb216027920418894f212c2abd37
-    name: HA3DTI_Gain_Level_2_Band_4_Left
-  - guid: d81d7abb6d1e6c240b15ae5a6ebb9f62
-    name: HA3DTI_Gain_Level_1_Band_4_Right
-  - guid: 133d66a353c50c24a80f59730025def3
-    name: HA3DTI_NoiseBefore_On
-  - guid: e96f70ca5fd446a42a6a8932442f272f
-    name: HA3DTI_Get_Limiter_Compression
-  - guid: 82098914b772cd444992ed935a37d994
-    name: HA3DTI_Normalization_DB_Right
-  - guid: 4ecbd918e1433114dad167193d954ede
-    name: HA3DTI_Normalization_LeftOn
-  - guid: fdc66585e1b4adb46a234fe26a46e668
-    name: HA3DTI_Tone_Mid_Left
-  - guid: d7804b40e590c9e4ab3f0525a7fababf
-    name: HA3DTI_Tone_Low_Right
   - guid: ca926d88a01189e4f8ebfc126cc4c3e4
     name: HA3DTI_Tone_High_Right
+  - guid: d7804b40e590c9e4ab3f0525a7fababf
+    name: HA3DTI_Tone_Low_Right
+  - guid: fdc66585e1b4adb46a234fe26a46e668
+    name: HA3DTI_Tone_Mid_Left
+  - guid: 4ecbd918e1433114dad167193d954ede
+    name: HA3DTI_Normalization_LeftOn
+  - guid: 82098914b772cd444992ed935a37d994
+    name: HA3DTI_Normalization_DB_Right
+  - guid: e96f70ca5fd446a42a6a8932442f272f
+    name: HA3DTI_Get_Limiter_Compression
+  - guid: 133d66a353c50c24a80f59730025def3
+    name: HA3DTI_NoiseBefore_On
+  - guid: 54b73c6e134aac247a2d45aecd61fa07
+    name: HA3DTI_Gain_Level_1_Band_1_Left
+  - guid: d81d7abb6d1e6c240b15ae5a6ebb9f62
+    name: HA3DTI_Gain_Level_1_Band_4_Right
+  - guid: da57513faaf906642bf7c2a7ab15f3b2
+    name: HA3DTI_Normalization_Get_Left
+  - guid: e579645981b51214c80291b6f601a8b4
+    name: HA3DTI_Gain_Level_2_Band_1_Right
+  - guid: a4a64b56e99906245aa3d43a67bc6985
+    name: HA3DTI_Gain_Level_0_Band_1_Right
+  - guid: 356594f2d1fac6841a1ae71d178ac855
+    name: HA3DTI_LPF_Cutoff
+  - guid: e7465563f79af5a47bd56160c1080ace
+    name: HA3DTI_Gain_Level_0_Band_2_Left
+  - guid: 90fd40bc090832d4eb014342fc2ecff5
+    name: HA3DTI_Gain_Level_2_Band_0_Left
+  - guid: 99d9527a835c86c4091e7c19bc5134d0
+    name: HA3DTI_Interpolation_On
+  - guid: 16bfbb216027920418894f212c2abd37
+    name: HA3DTI_Gain_Level_2_Band_4_Left
+  - guid: 6ee62f81c4683fa408c51e16118ac633
+    name: HA3DTI_Gain_Level_2_Band_5_Right
+  - guid: e2243e475fb7a984eb1ba1e1aca74118
+    name: HA3DTI_Gain_Level_1_Band_0_Right
+  - guid: 4b2ce22f63ee5c144876960dc869f15c
+    name: HA3DTI_NoiseAfter_On
+  - guid: d3fc0f4e6b1bf2c4a9b94ae6938e082d
+    name: HA3DTI_Gain_Level_0_Band_4_Right
+  - guid: 036b70eb5e5101d44a61bc8a7339cf1f
+    name: HA3DTI_NoiseBits
+  - guid: c39751511309f8a4b90114d16b3a2910
+    name: HA3DTI_Process_LeftOn
+  - guid: d860865c5706df24b8f5f531c49bcfa4
+    name: HA3DTI_Gain_Level_1_Band_4_Left
+  - guid: 3ed8ab48d91371f4e845bfe054271f79
+    name: HA3DTI_Gain_Level_0_Band_5_Left
+  - guid: 673a98b37fa5c4f48bd6a19d19dcdf5f
+    name: HA3DTI_Gain_Level_1_Band_0_Left
+  - guid: f595ca26dca86aa4cb5ea412e971f153
+    name: HA3DTI_Gain_Level_1_Band_6_Left
+  - guid: 26f747a488b52d442ad55a46e30c20d8
+    name: HA3DTI_Gain_Level_2_Band_3_Left
+  - guid: 3bdd0cddeae820946acc10e144014830
+    name: HA3DTI_Compression_Left
+  - guid: f34876b2d537bfb4284153db5b1ff220
+    name: HA3DTI_Limiter_On
+  - guid: a8c9612d5919f5445869280e65ff9551
+    name: HA3DTI_Gain_Level_1_Band_3_Right
+  - guid: 595b32669d45a104781a1fa54c2667cf
+    name: HA3DTI_Gain_Level_2_Band_1_Left
+  - guid: f20983dbbe8e8074cbbf66784f798938
+    name: HA3DTI_Gain_Level_2_Band_5_Left
+  - guid: 77a83b88a7eeecd42b5b25ca84a1b38d
+    name: HA3DTI_Gain_Level_0_Band_6_Right
+  - guid: 7b3b691359a58c740891bc10a177b354
+    name: HA3DTI_Threshold_1_Left
+  - guid: 8e2cbd80414cde34eb0baec0db07b024
+    name: HA3DTI_Gain_Level_2_Band_6_Right
+  - guid: caf9bf41bdb8aba49b7229cd2e5963aa
+    name: HA3DTI_Gain_Level_0_Band_1_Left
+  - guid: 8487a293de34bb54182163e56dc2ced8
+    name: HA3DTI_Threshold_2_Right
+  - guid: 4ad0cee9d5bfc504eb48b50a2f88c279
+    name: HA3DTI_Gain_Level_0_Band_0_Right
+  - guid: 8872c47f05dc6ed488c517ee45e87a9e
+    name: HA3DTI_Volume_Right
+  - guid: 136448d0d70e0c544b5d0c82fbf407bb
+    name: HA3DTI_Threshold_0_Right
+  - guid: 7897e5164339d3648b83047509402ba1
+    name: HA3DTI_Gain_Level_1_Band_2_Left
+  - guid: 8fd6901400191f54bbb8c088b281b472
+    name: HA3DTI_Gain_Level_1_Band_5_Right
+  - guid: 28cbcecafd4208f4b900c8c66ef86d86
+    name: HA3DTI_Gain_Level_0_Band_3_Left
+  - guid: 023674cdf8716aa44a1751591561588e
+    name: HA3DTI_Gain_Level_2_Band_2_Left
+  - guid: 8dd47cb4ca64f3642b2281d31a505760
+    name: HA3DTI_Gain_Level_2_Band_4_Right
+  - guid: 3e367aa8a4fb6674e959e3df12054c15
+    name: HA3DTI_Gain_Level_0_Band_2_Right
+  - guid: dde2a4b95609795408469d379bb1b3e4
+    name: HA3DTI_Gain_Level_1_Band_1_Right
+  - guid: 2102c837277715c4b929ad6564956744
+    name: HA3DTI_Gain_Level_2_Band_0_Right
+  - guid: 45a40dd2fbb3c0e47b872ef3384d4778
+    name: HA3DTI_Tone_High_Left
+  - guid: 1112fe27df5f4e14c876679bb95133b4
+    name: HA3DTI_Tone_Low_Left
+  - guid: 7bdffc9c0378dfd49a31d2e6a8be65a7
+    name: HA3DTI_Tone_Mid_Right
+  - guid: 4d9b3333d54ba624c8f00c676ecd2d54
+    name: HA3DTI_Gain_Level_2_Band_2_Right
+  - guid: 3a3fc15eaa93a23498deb7072c054dc0
+    name: HA3DTI_Normalization_DB_Left
+  - guid: 7dfb1d3029878514a9b030e2b5603fea
+    name: HA3DTI_Normalization_Get_Right
+  - guid: 47ab3e91cfcac4e41a915612e59a9649
+    name: HA3DTI_AttackRelease_Right
+  - guid: b7f88a1c95f8a4a4597976f1bd2eecbc
+    name: HA3DTI_Normalization_RightOn
+  - guid: 50fa593aefc2cfc488453e279e561f53
+    name: HL3DTI_FS_Size_Up_Right
+  - guid: 7695112310f896d4eacdd65b48c52967
+    name: HL3DTI_MBE_LeftOn
+  - guid: 5d42178e67b3f7c4399080ebc09e34e4
+    name: HL3DTI_FS_Hz_Down_Right
+  - guid: e4666f49ba9398c49a52b386d9028003
+    name: HL3DTI_TA_Autocor1_Get_Right
+  - guid: a87af891a6f11f342bff5c31a2a779a8
+    name: HL3DTI_HL_Band_3_Left
+  - guid: 44d017ce40c03814a861107528720cda
+    name: HL3DTI_HL_Band_2_Left
+  - guid: 8378e6d63d0f4854ab17bd2f50a9765c
+    name: HL3DTI_HL_Band_0_Right
+  - guid: d46ff6ff969bc2b4294cc2f5fe152bee
+    name: HL3DTI_Attack_Right
+  - guid: bad790b9de953ce4b8a346f998dc4f24
+    name: HL3DTI_HL_Band_8_Left
+  - guid: 4f1fcde21ba36644a8a576022e541905
+    name: HL3DTI_HL_Band_1_Right
+  - guid: 4c5cd30a10964164d967ea230d535f16
+    name: HL3DTI_HL_Band_1_Left
+  - guid: 180b550180e570c44a6ccee94934017b
+    name: HL3DTI_FS_Size_Down_Right
+  - guid: d0871db4daaaa6448910ccc3ed25d3e2
+    name: HL3DTI_FS_RightOn
+  - guid: de9adeb42d455d043876c97e0bbed783
+    name: HL3DTI_HL_Band_3_Right
+  - guid: 4bc479ff96250054bad361801f1a2277
+    name: HL3DTI_Release_Left
+  - guid: d9da3ab8457b9e24383b5ecba9087b52
+    name: HL3DTI_HL_Band_5_Right
+  - guid: 9b912451ad92b964abc3ce0797daf381
+    name: HL3DTI_Calibration
+  - guid: 0826b20486b5a3041930d9cfe41233b3
+    name: HL3DTI_HL_Band_7_Left
+  - guid: bc60520e7383b194fbd67052d38a4974
+    name: HL3DTI_TA_Band_Right
+  - guid: 0a8474d223d7a1e4d83ff1cf56633f7a
+    name: HL3DTI_Release_Right
+  - guid: 745a304e17cc2fd45bc328804e577939
+    name: HL3DTI_FS_Hz_Up_Right
+  - guid: 311a8c79ebcf9754d8ce892b9a49c5bd
+    name: HL3DTI_HL_Band_4_Right
+  - guid: c3a2e0a4dd3870049bc5b5d889ee9dc6
+    name: HL3DTI_MBE_RightOn
+  - guid: aa6b5633170811c409ff23a0e872d454
+    name: HL3DTI_HL_Band_4_Left
+  - guid: 0784fe66a4e868d429587717c444b05d
+    name: HL3DTI_FS_Hz_Down_Left
+  - guid: f345317eab249ce43b1b42b09d019515
+    name: HL3DTI_TA_LRSync_On
+  - guid: 07196df0752037f44bf5e3f8395d68a7
+    name: HL3DTI_TA_Autocor1_Get_Left
   - guid: 608e569862f5b0d4888cc4ff951ff722
     name: HL3DTI_Process_RightOn
   - guid: bd8f6e80ab25a11469efa256459839e5
@@ -182,8 +238,6 @@ AudioMixerController:
     name: HL3DTI_FS_LeftOn
   - guid: 9a0d8dd98f71ad940bd99d1c2087a2fa
     name: HL3DTI_TA_LRSync
-  - guid: 3ecf88f64ddb4c14ba8de6fc97e0d08e
-    name: HL3DTI_HL_Band_5_Left
   - guid: 7f0c47efaa7a4fd499e1211b7fdc5176
     name: HL3DTI_Attack_Left
   - guid: 52be5ab811cd2e84e86ce478c2c03d02
@@ -202,8 +256,6 @@ AudioMixerController:
     name: HL3DTI_HL_Band_0_Left
   - guid: d2628ad51ac6aa248ac489f455c29982
     name: HL3DTI_FS_Size_Down_Left
-  - guid: 0784fe66a4e868d429587717c444b05d
-    name: HL3DTI_FS_Hz_Down_Left
   - guid: 163240d50b578d444b4331c8f96d8394
     name: HL3DTI_FS_Size_Up_Left
   - guid: 94a8f16eb4b6173438035ec9ecf89bc5
@@ -216,60 +268,10 @@ AudioMixerController:
     name: HL3DTI_FS_Hz_Up_Left
   - guid: 25449ababf7d1ed408bf41eacde3d1c8
     name: HL3DTI_TA_Noise_LPF_Left
-  - guid: f345317eab249ce43b1b42b09d019515
-    name: HL3DTI_TA_LRSync_On
   - guid: dc6a0aa54cb2c664cb359239fbc6abea
     name: HL3DTI_Process_LeftOn
-  - guid: aa6b5633170811c409ff23a0e872d454
-    name: HL3DTI_HL_Band_4_Left
-  - guid: 0826b20486b5a3041930d9cfe41233b3
-    name: HL3DTI_HL_Band_7_Left
-  - guid: 8378e6d63d0f4854ab17bd2f50a9765c
-    name: HL3DTI_HL_Band_0_Right
-  - guid: 44d017ce40c03814a861107528720cda
-    name: HL3DTI_HL_Band_2_Left
-  - guid: e4666f49ba9398c49a52b386d9028003
-    name: HL3DTI_TA_Autocor1_Get_Right
-  - guid: a87af891a6f11f342bff5c31a2a779a8
-    name: HL3DTI_HL_Band_3_Left
-  - guid: bad790b9de953ce4b8a346f998dc4f24
-    name: HL3DTI_HL_Band_8_Left
-  - guid: 5d42178e67b3f7c4399080ebc09e34e4
-    name: HL3DTI_FS_Hz_Down_Right
-  - guid: 7695112310f896d4eacdd65b48c52967
-    name: HL3DTI_MBE_LeftOn
-  - guid: 50fa593aefc2cfc488453e279e561f53
-    name: HL3DTI_FS_Size_Up_Right
-  - guid: d46ff6ff969bc2b4294cc2f5fe152bee
-    name: HL3DTI_Attack_Right
-  - guid: 4f1fcde21ba36644a8a576022e541905
-    name: HL3DTI_HL_Band_1_Right
-  - guid: c3a2e0a4dd3870049bc5b5d889ee9dc6
-    name: HL3DTI_MBE_RightOn
-  - guid: 180b550180e570c44a6ccee94934017b
-    name: HL3DTI_FS_Size_Down_Right
-  - guid: d0871db4daaaa6448910ccc3ed25d3e2
-    name: HL3DTI_FS_RightOn
-  - guid: de9adeb42d455d043876c97e0bbed783
-    name: HL3DTI_HL_Band_3_Right
-  - guid: 4bc479ff96250054bad361801f1a2277
-    name: HL3DTI_Release_Left
-  - guid: d9da3ab8457b9e24383b5ecba9087b52
-    name: HL3DTI_HL_Band_5_Right
-  - guid: 9b912451ad92b964abc3ce0797daf381
-    name: HL3DTI_Calibration
-  - guid: 4c5cd30a10964164d967ea230d535f16
-    name: HL3DTI_HL_Band_1_Left
-  - guid: bc60520e7383b194fbd67052d38a4974
-    name: HL3DTI_TA_Band_Right
-  - guid: 0a8474d223d7a1e4d83ff1cf56633f7a
-    name: HL3DTI_Release_Right
-  - guid: 745a304e17cc2fd45bc328804e577939
-    name: HL3DTI_FS_Hz_Up_Right
-  - guid: 311a8c79ebcf9754d8ce892b9a49c5bd
-    name: HL3DTI_HL_Band_4_Right
-  - guid: 07196df0752037f44bf5e3f8395d68a7
-    name: HL3DTI_TA_Autocor1_Get_Left
+  - guid: 3ecf88f64ddb4c14ba8de6fc97e0d08e
+    name: HL3DTI_HL_Band_5_Left
   m_AudioMixerGroupViews:
   - guids:
     - 839c4ed9355208546be95fc11b89d737
@@ -334,7 +336,7 @@ AudioMixerSnapshotController:
     180b550180e570c44a6ccee94934017b: 100
     ba3499114b43b2d49a5f906d383d4edc: -80
     16bfbb216027920418894f212c2abd37: 51
-    db2c3d317fd3f9b4686671039ca9fb71: 0
+    db2c3d317fd3f9b4686671039ca9fb71: 1
     caf9bf41bdb8aba49b7229cd2e5963aa: 42
     c39751511309f8a4b90114d16b3a2910: 1
     9b912451ad92b964abc3ce0797daf381: 88
@@ -481,7 +483,7 @@ AudioMixerSnapshotController:
     a8c9612d5919f5445869280e65ff9551: 17
     a2a05f5dc7a110648869cb173e6998b8: -15
     8202a77dff853ef4788a8d9b8b4c2111: 1
-    535fec8d7bf1d304ca47809d465350c3: 0
+    535fec8d7bf1d304ca47809d465350c3: 1
     8afa24ad5cd24084e8944a4bb8d3dff6: -12
     67d3c6bd094e34a4eaf1dc8ac7e63b01: 2495
     023674cdf8716aa44a1751591561588e: 2
@@ -489,7 +491,7 @@ AudioMixerSnapshotController:
     28a3b3ed5be414e4bb671e5491ee5376: 1
     952a8efd78b04644295d00f5b7e96b4f: -22
     bc60520e7383b194fbd67052d38a4974: 1600
-    9a04031e9aeb6984a9d578735e993ba3: -4.5
+    9a04031e9aeb6984a9d578735e993ba3: -18.10123
     745a304e17cc2fd45bc328804e577939: 150
     d3fc0f4e6b1bf2c4a9b94ae6938e082d: 17
     3a3fc15eaa93a23498deb7072c054dc0: 3.73

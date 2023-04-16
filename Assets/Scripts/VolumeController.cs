@@ -1,36 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
 using Slider = UnityEngine.UI.Slider;
 
 public class VolumeController : MonoBehaviour
 {
-    private AudioSource[] audioSources;
-
     [SerializeField] private Slider _SliderVolume = null;
-    [SerializeField] private Slider _SliderVolume2 = null;
+    public AudioMixer mixer;
+    AudioSource audioSource;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        audioSources = GameObject.FindGameObjectWithTag("AudioSource").GetComponents<AudioSource>();
-
+<<<<<<< HEAD
+        mixer.SetFloat("exposedVolumeParam", Mathf.Log10(_SliderVolume.value) * 20);
+        if (SceneManager.GetActiveScene().name == "Ambisonics")
+=======
+        audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
+        //audio = GameObject.FindGameObjectWithTag("AudioSource");
         _SliderVolume.onValueChanged.AddListener((v) =>
+>>>>>>> parent of c14175d (Ambisonics Update)
         {
-            foreach(AudioSource source in audioSources)
+            try
             {
-                source.volume = v;
+                mixer.SetFloat("exposedVolumeParam", Mathf.Log10(v) * 20);
+            } catch(Exception ex)
+            {
+                audioSource.volume = v;
+                Debug.Log("Error en " + ex);
             }
-            if(_SliderVolume2 != null)
-                _SliderVolume2.value = v;
-        });
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    });
     }
 }

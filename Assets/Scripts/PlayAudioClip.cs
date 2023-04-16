@@ -23,8 +23,6 @@ public class PlayAudioClip : MonoBehaviour
     // Update is called once per frame
     public void playClip()
     {
-        if(additiveSynthesis!= null)
-            additiveSynthesis.playingCustomTone = false;
         audioSource.panStereo = 0;
         if (audioSource.clip != audioClip)
         {
@@ -35,5 +33,7 @@ public class PlayAudioClip : MonoBehaviour
             audioSource.Stop();
         else
             audioSource.Play();
+        if(additiveSynthesis!= null)
+            additiveSynthesis.setAdditiveEnable(false);
     }
 }

@@ -10,20 +10,38 @@ public class PlayCustomAudio : MonoBehaviour
     private AudioSource audioSource;
     public AudioClip audioClip;
     private AdditiveSynthesis adSynthesis;
-    [SerializeField] private Slider _sliderFrecuency;
+
+    [SerializeField] private Slider _sliderFrequency;
     [SerializeField] private Slider _sliderAmplitude;
     [SerializeField] private Slider _sliderPhase;
 
-    [SerializeField] private int _customFrecuency;
+    [SerializeField] private int _customFrequency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
+
+    [SerializeField] private int _lowFrequency;
+    [SerializeField] private float _lowAmplitude;
+    [SerializeField] private float _lowPhase;
+
+    [SerializeField] private int _highFrequency;
+    [SerializeField] private float _highAmplitude;
+    [SerializeField] private float _highPhase;
+
+    private bool lowFreq;
+    private bool highFreq;
+    private bool lowAmplitude;
+    private bool highAmplitude;
+    private bool lowPhase;
+    private bool highPhase;
+    private bool playCustom;
+
 
     //[SerializeField] private Slider slider;
 
     void Start()
     {
         _customAmplitude = 0.5f;
-        _customFrecuency = 1;
+        _customFrequency = 1;
         _customPhase = 0;
 
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
@@ -39,12 +57,12 @@ public class PlayCustomAudio : MonoBehaviour
                 //slider.value = _customAmplitude;
             });
         }
-        if (_sliderFrecuency != null)
+        if (_sliderFrequency != null)
         {
-            _sliderFrecuency.onValueChanged.AddListener((v) =>
+            _sliderFrequency.onValueChanged.AddListener((v) =>
             {
-                _customFrecuency = (int) v;
-                adSynthesis.Frequency = _customFrecuency;
+                _customFrequency = (int) v;
+                adSynthesis.Frequency = _customFrequency;
             });
         }
         if (_sliderPhase != null)
@@ -57,41 +75,132 @@ public class PlayCustomAudio : MonoBehaviour
         }
     }
 
-    public void playSoundEffect()
+    public void playLowFrequency()
     {
-        if (audioSource.isPlaying)
+        if (!lowFreq)
         {
-            audioSource.Stop();
-            
+            lowFreq = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
         }
         else
         {
-            audioSource.clip = audioClip;
-            audioSource.Play();
+            lowFreq = false;
+            adSynthesis.setAdditiveEnable(false);
         }
+        _sliderFrequency.value = _lowFrequency;
+        _customFrequency = _lowFrequency;
+        adSynthesis.Frequency = _customFrequency;
     }
+
+    public void playHighFrequency()
+    {
+        if (!highFreq)
+        {
+            highFreq = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
+        }
+        else
+        {
+            highFreq = false;
+            adSynthesis.setAdditiveEnable(false);
+        }
+        _sliderFrequency.value = _highFrequency;
+        _customFrequency = _highFrequency;
+        adSynthesis.Frequency = _highFrequency;
+    }
+    public void playLowAmplitude()
+    {
+        if (!lowAmplitude)
+        {
+            lowAmplitude = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
+        }
+        else
+        {
+            lowAmplitude = false;
+            adSynthesis.setAdditiveEnable(false);
+        }
+        _sliderAmplitude.value = _lowAmplitude;
+        _customAmplitude = _lowAmplitude;
+        adSynthesis.Amplitude = _lowAmplitude;
+    }
+
+    public void playHighAmplitude()
+    {
+        if (!highAmplitude)
+        {
+            highAmplitude = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
+        }
+        else
+        {
+            highAmplitude = false;
+            adSynthesis.setAdditiveEnable(false);
+        }
+        _sliderAmplitude.value = _highAmplitude;
+        _customAmplitude = _highAmplitude;
+        adSynthesis.Amplitude = _highAmplitude;
+    }
+
+    public void playLowPhase()
+    {
+        if (!lowPhase)
+        {
+            lowPhase = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
+        }
+        else
+        {
+            lowPhase = false;
+            adSynthesis.setAdditiveEnable(false);
+        }
+        _sliderPhase.value = _lowPhase * MathF.PI;
+        _customPhase = _lowPhase * MathF.PI;
+        adSynthesis.Phase = _lowPhase * MathF.PI;
+    }
+
+    public void playHighPhase()
+    {
+        if (!highPhase)
+        {
+            highPhase = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
+        }
+        else
+        {
+            highPhase = false;
+            adSynthesis.setAdditiveEnable(false);
+        }
+        _sliderPhase.value = _highPhase;
+        _customPhase = _highPhase;
+        adSynthesis.Phase = _highPhase;
+    }
+
 
     public void PlayCustomAudioADSynthesis()
     {
-        adSynthesis.playingCustomTone = !adSynthesis.playingCustomTone;
         audioSource.clip = null;
-    }
-
-    public void playClip()
-    {
-        if (audioSource.clip != audioClip && audioSource.isPlaying)
+        if(!playCustom)
         {
-            audioSource.clip = audioClip;
-            audioSource.Play();
+            playCustom = setEverythingFalse();
+            adSynthesis.setAdditiveEnable(true);
         }
-        else if (audioSource.isPlaying)
-            audioSource.Stop();
         else
-            audioSource.Play();
+        {
+            playCustom=false;
+            adSynthesis.setAdditiveEnable(false);
+        }
     }
 
-    public void ResetPanStereo()
+    private bool setEverythingFalse()
     {
-        audioSource.panStereo = 0;
+        lowFreq = false;
+        highFreq = false;
+        lowAmplitude = false;
+        highAmplitude = false;
+        lowPhase = false;
+        highPhase = false;
+        playCustom = false;
+        return true;
     }
 }
