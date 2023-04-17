@@ -48,10 +48,13 @@ public class TuneInController : MonoBehaviour
         {
             API_3DTI_HL.EnableHearingLoss(T_ear.BOTH);
             API_3DTI_HL.EnableNonLinearAttenuation(T_ear.BOTH);
+            hearingAidToggle.interactable = true;
         }
         else
         {
             API_3DTI_HL.DisableNonLinearAttenuation(T_ear.BOTH);
+            hearingAidToggle.interactable = false;
+            hearingAidToggle.isOn = false;
         }
         conductive = !conductive;
         checkIfEverythingDisable(); 
@@ -59,16 +62,11 @@ public class TuneInController : MonoBehaviour
 
     public void ToggleNeuro()
     {
-        bool isEverythingOK = false;
-        Debug.Log("Neuro: " + neurosensor);
         if (!neurosensor)
         {
-            Debug.Log("Dentro: 1");
             API_3DTI_HL.EnableHearingLoss(T_ear.BOTH);
-            Debug.Log("Dentro: 2");
-            isEverythingOK = API_3DTI_HL.EnableFrequencySmearingSimulation(T_ear.BOTH);
-            Debug.Log("Dentro: 3");
-            //isEverythingOK = API_3DTI_HL.EnableTemporalDistortionSimulation(T_ear.BOTH);
+            API_3DTI_HL.EnableFrequencySmearingSimulation(T_ear.BOTH);
+            API_3DTI_HL.EnableTemporalDistortionSimulation(T_ear.BOTH);
         }
         else
         {
@@ -81,7 +79,7 @@ public class TuneInController : MonoBehaviour
 
     public void ToggleHA()
     {
-        if (!hearingAid && (conductive || neurosensor))
+        if (!hearingAid && (conductive))
         {
             API_3DTI_HA.EnableHAInBothEars(true);
             hearingAid = true;

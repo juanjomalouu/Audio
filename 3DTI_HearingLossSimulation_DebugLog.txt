@@ -7180,3 +7180,511 @@ SET PARAMETER: Left ear temporal distortion simulation switched ON
 SET PARAMETER: Right ear temporal distortion simulation switched ON
 SET PARAMETER: Frequency smearing in left ear switched ON
 SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Band upper limit (Hz) for Left temporal distortion simulator set to: 3200
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 850
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.8
+SET PARAMETER: Band upper limit (Hz) for Right temporal distortion simulator set to: 3200
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 850
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.8
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Band upper limit (Hz) for Left temporal distortion simulator set to: 12800
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 1000
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 1
+SET PARAMETER: Band upper limit (Hz) for Right temporal distortion simulator set to: 12800
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 1000
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 1
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 980.6
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 785.93
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 646.37
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 554.02
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 491.58
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 456.68
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 425.35
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 411.3
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 407.67
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 384.54
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 370
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 364.27
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.99
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.98
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.96
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.94
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.91
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.88
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.83
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.77
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.72
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.68
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.65
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.64
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.62
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.61
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.6
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.58
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.56
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.54
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.49
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.46
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.44
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.41
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.4
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.42
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.45
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.47
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.49
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.51
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.54
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.55
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 0.57
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.58
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.57
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.56
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.54
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.53
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.51
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.48
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.46
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.48
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.5
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.54
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.6
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.64
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.67
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.7
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 0.73
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 990.3
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 982
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 973.24
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 964.32
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 946.48
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 919.72
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 913.13
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 903.61
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 893.91
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 894.84
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 884.04
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 865
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 848.37
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 830.53
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 802
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 757
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 696.73
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 611.01
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 534.95
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 429.14
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 398.83
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 384.54
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 370
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 355.19
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 369.05
+SET PARAMETER: Band upper limit (Hz) for Right temporal distortion simulator set to: 6400
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Left temporal distortion simulator set to: 1000
+SET PARAMETER: White noise power (ms) for Left temporal Distortion simulator set to: 1
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left-right ear synchronicity in temporal distortion simulator switched ON
+SET PARAMETER: Band upper limit (Hz) for Right temporal distortion simulator set to: 12800
+SET PARAMETER: Noise autocorrelation LPF cutoff (Hz) for Right temporal Distortion simulator set to: 1000
+SET PARAMETER: White noise power (ms) for Right temporal distortion simulator set to: 1
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.1
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.11
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.12
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.13
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.14
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.16
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.19
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.21
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.24
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.27
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.31
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.35
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.38
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.4
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.43
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.44
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.45
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Left ear multiband expander switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.46
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.49
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.52
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.55
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.57
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.6
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.65
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.74
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.84
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 0.92
+SET PARAMETER: Left-Right synchronicity for temporal distortion simulator set to: 1
+SET PARAMETER: Left ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear hearing loss simulation switched OFF
+SET PARAMETER: Right ear multiband expander switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear hearing loss simulation switched ON
+SET PARAMETER: Right ear hearing loss simulation switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched ON
+SET PARAMETER: Right ear multiband expander switched ON
+SET PARAMETER: Left ear temporal distortion simulation switched OFF
+SET PARAMETER: Right ear temporal distortion simulation switched OFF
+SET PARAMETER: Frequency smearing in left ear switched OFF
+SET PARAMETER: Frequency smearing in right ear switched OFF
+SET PARAMETER: Left ear temporal distortion simulation switched ON
+SET PARAMETER: Right ear temporal distortion simulation switched ON
+SET PARAMETER: Frequency smearing in left ear switched ON
+SET PARAMETER: Frequency smearing in right ear switched ON
+SET PARAMETER: Left ear multiband expander switched OFF
