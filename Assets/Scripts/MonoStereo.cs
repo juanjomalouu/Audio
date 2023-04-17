@@ -1,4 +1,7 @@
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Slider = UnityEngine.UI.Slider;
 
 public class MonoStereo : MonoBehaviour
 {
@@ -13,6 +16,8 @@ public class MonoStereo : MonoBehaviour
     [SerializeField] AudioClip instrument3Stereo;
     [SerializeField] AudioClip instrument4Stereo;
     [SerializeField] bool[] playInstr;
+
+    [SerializeField] private Slider sliderVolume;
 
     bool isMono = false;
 
@@ -36,6 +41,14 @@ public class MonoStereo : MonoBehaviour
         {
             playInstr[i] = false;
         }
+
+        sliderVolume.onValueChanged.AddListener((v) =>
+        {
+            foreach (AudioSource source in audioSources)
+            {
+                source.volume = v;
+            }
+        });
     }
 
     private void Update()
@@ -59,7 +72,7 @@ public class MonoStereo : MonoBehaviour
             for(int i = 0; i < audioSources.Length; i++)
             {
                 if(i / 4 == 0 && playInstr[i%4])
-                    audioSources[i].volume = 1;
+                    audioSources[i].volume = setSliderVolume();
                 else if (playInstr[i%4])
                     audioSources[i].volume = 0;
             }
@@ -94,7 +107,7 @@ public class MonoStereo : MonoBehaviour
                 if (i / 4 == 0 && playInstr[i % 4])
                     audioSources[i].volume = 0;
                 else if(playInstr[i%4])
-                    audioSources[i].volume = 1;
+                    audioSources[i].volume = setSliderVolume();
             }
         }
         if (audioSources[0].isPlaying && !isMono)
@@ -134,11 +147,15 @@ public class MonoStereo : MonoBehaviour
         else
         {
             if(isMono)
-                audioSources[i].volume = 1;
+                audioSources[i].volume = setSliderVolume();
             else
-                audioSources[i + 4].volume = 1;
+                audioSources[i + 4].volume = setSliderVolume();
         }
         playInstr[i] = !playInstr[i];
     }
 
+    public float setSliderVolume()
+    {
+        return sliderVolume.value;
+    }
 }

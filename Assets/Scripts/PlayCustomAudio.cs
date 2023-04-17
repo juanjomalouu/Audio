@@ -179,16 +179,16 @@ public class PlayCustomAudio : MonoBehaviour
 
     public void PlayCustomAudioADSynthesis()
     {
-        audioSource.clip = null;
-        if(!playCustom)
+        if (!playCustom && !getSomethingTrue())
         {
-            playCustom = setEverythingFalse();
             adSynthesis.setAdditiveEnable(true);
+            playCustom = setEverythingFalse();
         }
-        else
+        else 
         {
-            playCustom=false;
             adSynthesis.setAdditiveEnable(false);
+            playCustom = setEverythingFalse();
+            playCustom = false;
         }
     }
 
@@ -202,5 +202,10 @@ public class PlayCustomAudio : MonoBehaviour
         highPhase = false;
         playCustom = false;
         return true;
+    }
+
+    private bool getSomethingTrue()
+    {
+        return lowAmplitude || lowFreq || lowPhase || highAmplitude || highFreq || highPhase;
     }
 }
