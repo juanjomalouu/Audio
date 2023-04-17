@@ -23,6 +23,9 @@ public class TuneInController : MonoBehaviour
         audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<AudioSource>();
         API_3DTI_HL.EnableHearingLossInBothEars(false);
         API_3DTI_HA.EnableHAInBothEars(false);
+        API_3DTI_HL.DisableFrequencySmearingSimulation(T_ear.BOTH);
+        API_3DTI_HL.DisableTemporalDistortionSimulation(T_ear.BOTH);
+        API_3DTI_HL.DisableNonLinearAttenuation(T_ear.BOTH);
     }
 
     public void playClip()
@@ -56,11 +59,16 @@ public class TuneInController : MonoBehaviour
 
     public void ToggleNeuro()
     {
+        bool isEverythingOK = false;
+        Debug.Log("Neuro: " + neurosensor);
         if (!neurosensor)
         {
+            Debug.Log("Dentro: 1");
             API_3DTI_HL.EnableHearingLoss(T_ear.BOTH);
-            API_3DTI_HL.EnableFrequencySmearingSimulation(T_ear.BOTH);
-            API_3DTI_HL.EnableTemporalDistortionSimulation(T_ear.BOTH);
+            Debug.Log("Dentro: 2");
+            isEverythingOK = API_3DTI_HL.EnableFrequencySmearingSimulation(T_ear.BOTH);
+            Debug.Log("Dentro: 3");
+            //isEverythingOK = API_3DTI_HL.EnableTemporalDistortionSimulation(T_ear.BOTH);
         }
         else
         {

@@ -5907,3 +5907,298 @@ SET PARAMETER: HIgh tone band Left set to (dB) 0
 SET PARAMETER: Low tone band Right set to (dB) 0
 SET PARAMETER: Mid tone band Right set to (dB) 0
 SET PARAMETER: High tone band Right set to (dB) 0
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Levels interpolation in dynamic equalizer set to Off
+SET PARAMETER: Levels interpolation in dynamic equalizer set to On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: High pass filter cutoff frequency set to: 1125
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Right volume set to (dB): 8
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Gain for Level 0, Band 0, Right channel = 42
+SET PARAMETER: Gain for Level 0, Band 1, Right channel = 27
+SET PARAMETER: Gain for Level 0, Band 2, Right channel = 8
+SET PARAMETER: Gain for Level 0, Band 3, Right channel = 42
+SET PARAMETER: Gain for Level 0, Band 4, Right channel = 27
+SET PARAMETER: Gain for Level 0, Band 5, Right channel = 8
+SET PARAMETER: Gain for Level 0, Band 6, Right channel = 42
+SET PARAMETER: Gain for Level 1, Band 0, Right channel = 27
+SET PARAMETER: Gain for Level 1, Band 1, Right channel = 8
+SET PARAMETER: Gain for Level 1, Band 2, Right channel = 42
+SET PARAMETER: Gain for Level 1, Band 3, Right channel = 27
+SET PARAMETER: Gain for Level 1, Band 4, Right channel = 8
+SET PARAMETER: Gain for Level 1, Band 5, Right channel = 42
+SET PARAMETER: Gain for Level 1, Band 6, Right channel = 27
+SET PARAMETER: Gain for Level 2, Band 0, Right channel = 8
+SET PARAMETER: Gain for Level 2, Band 1, Right channel = 42
+SET PARAMETER: Gain for Level 2, Band 2, Right channel = 27
+SET PARAMETER: Gain for Level 2, Band 3, Right channel = 8
+SET PARAMETER: Gain for Level 2, Band 4, Right channel = 42
+SET PARAMETER: Gain for Level 2, Band 5, Right channel = 27
+SET PARAMETER: Gain for Level 2, Band 6, Right channel = 8
+SET PARAMETER: Gain for Level 0, Band 0, Left channel = 42
+SET PARAMETER: Gain for Level 0, Band 1, Left channel = 27
+SET PARAMETER: Gain for Level 0, Band 2, Left channel = 8
+SET PARAMETER: Gain for Level 0, Band 3, Left channel = 42
+SET PARAMETER: Gain for Level 0, Band 4, Left channel = 27
+SET PARAMETER: Gain for Level 0, Band 5, Left channel = 8
+SET PARAMETER: Gain for Level 0, Band 6, Left channel = 42
+SET PARAMETER: Gain for Level 1, Band 0, Left channel = 27
+SET PARAMETER: Gain for Level 1, Band 1, Left channel = 8
+SET PARAMETER: Gain for Level 1, Band 2, Left channel = 42
+SET PARAMETER: Gain for Level 1, Band 3, Left channel = 27
+SET PARAMETER: Gain for Level 1, Band 4, Left channel = 8
+SET PARAMETER: Gain for Level 1, Band 5, Left channel = 42
+SET PARAMETER: Gain for Level 1, Band 6, Left channel = 27
+SET PARAMETER: Gain for Level 2, Band 0, Left channel = 8
+SET PARAMETER: Gain for Level 2, Band 1, Left channel = 42
+SET PARAMETER: Gain for Level 2, Band 2, Left channel = 27
+SET PARAMETER: Gain for Level 2, Band 3, Left channel = 8
+SET PARAMETER: Gain for Level 2, Band 4, Left channel = 42
+SET PARAMETER: Gain for Level 2, Band 5, Left channel = 27
+SET PARAMETER: Gain for Level 2, Band 6, Left channel = 8
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Third threshold for Left channel = -79
+SET PARAMETER: Third threshold for Left channel = -78
+SET PARAMETER: Third threshold for Left channel = -76
+SET PARAMETER: Third threshold for Left channel = -73
+SET PARAMETER: Third threshold for Left channel = -71
+SET PARAMETER: Third threshold for Left channel = -67
+SET PARAMETER: Third threshold for Left channel = -63
+SET PARAMETER: Third threshold for Left channel = -59
+SET PARAMETER: Third threshold for Left channel = -55
+SET PARAMETER: Third threshold for Left channel = -51
+SET PARAMETER: Third threshold for Left channel = -48
+SET PARAMETER: Third threshold for Left channel = -45
+SET PARAMETER: Third threshold for Left channel = -43
+SET PARAMETER: Third threshold for Left channel = -42
+SET PARAMETER: Third threshold for Left channel = -41
+SET PARAMETER: Third threshold for Left channel = -40
+SET PARAMETER: Third threshold for Left channel = -39
+SET PARAMETER: Third threshold for Left channel = -38
+SET PARAMETER: Third threshold for Right channel = -77
+SET PARAMETER: Third threshold for Right channel = -76
+SET PARAMETER: Third threshold for Right channel = -73
+SET PARAMETER: Third threshold for Right channel = -71
+SET PARAMETER: Third threshold for Right channel = -68
+SET PARAMETER: Third threshold for Right channel = -65
+SET PARAMETER: Third threshold for Right channel = -62
+SET PARAMETER: Third threshold for Right channel = -58
+SET PARAMETER: Third threshold for Right channel = -56
+SET PARAMETER: Third threshold for Right channel = -54
+SET PARAMETER: Third threshold for Right channel = -51
+SET PARAMETER: Third threshold for Right channel = -49
+SET PARAMETER: Third threshold for Right channel = -48
+SET PARAMETER: Third threshold for Right channel = -46
+SET PARAMETER: Third threshold for Right channel = -45
+SET PARAMETER: Third threshold for Right channel = -44
+SET PARAMETER: Third threshold for Right channel = -43
+SET PARAMETER: Third threshold for Right channel = -42
+SET PARAMETER: Third threshold for Right channel = -41
+SET PARAMETER: Third threshold for Right channel = -40
+SET PARAMETER: Third threshold for Right channel = -39
+SET PARAMETER: Third threshold for Right channel = -38
+SET PARAMETER: Third threshold for Right channel = -37
+SET PARAMETER: Third threshold for Right channel = -36
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: HIgh tone band Left set to (dB) 1
+SET PARAMETER: HIgh tone band Left set to (dB) 2
+SET PARAMETER: High tone band Right set to (dB) 1
+SET PARAMETER: High tone band Right set to (dB) 3
+SET PARAMETER: High tone band Right set to (dB) 2
+SET PARAMETER: Attack/Release time for Right channel = 82
+SET PARAMETER: Third threshold for Right channel = -38
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
+SET PARAMETER: Left HA switched On
+SET PARAMETER: Right HA switched On
+SET PARAMETER: Left HA switched Off
+SET PARAMETER: Right HA switched Off
