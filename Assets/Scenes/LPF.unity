@@ -2696,6 +2696,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 757d8c0d2e69e954290d751650426042, type: 3}
+  showAudioBar: 0
+  audioBarSlider: {fileID: 0}
+  textLabel: {fileID: 0}
 --- !u!1 &1801114878
 GameObject:
   m_ObjectHideFlags: 0

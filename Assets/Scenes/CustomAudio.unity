@@ -324,7 +324,6 @@ GameObject:
   - component: {fileID: 241277339}
   - component: {fileID: 241277338}
   - component: {fileID: 241277337}
-  - component: {fileID: 241277340}
   m_Layer: 5
   m_Name: FrecuenciaAlta
   m_TagString: Untagged
@@ -447,20 +446,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 241277335}
   m_CullTransparentMesh: 1
---- !u!114 &241277340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 241277335}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: bba37bfb0730f194890e2566d96b193f, type: 3}
-  slider: {fileID: 336664854}
 --- !u!1 &254883510
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1107,6 @@ GameObject:
   - component: {fileID: 356640885}
   - component: {fileID: 356640884}
   - component: {fileID: 356640883}
-  - component: {fileID: 356640882}
   m_Layer: 5
   m_Name: AmplitudBaja
   m_TagString: Untagged
@@ -1151,20 +1135,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 225.8443, y: 95.8443}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &356640882
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356640880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 53527ecec0009de4982baa8cf6f4b063, type: 3}
-  slider: {fileID: 336664854}
 --- !u!114 &356640883
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,7 +2339,6 @@ GameObject:
   - component: {fileID: 764354077}
   - component: {fileID: 764354076}
   - component: {fileID: 764354075}
-  - component: {fileID: 764354074}
   m_Layer: 5
   m_Name: FaseBaja
   m_TagString: Untagged
@@ -2398,20 +2367,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 225.8443, y: 95.8443}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &764354074
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764354072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: d5ec643fd0720064b8c1d4ea8614250d, type: 3}
-  slider: {fileID: 336664854}
 --- !u!114 &764354075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4422,7 +4377,6 @@ GameObject:
   - component: {fileID: 1839596528}
   - component: {fileID: 1839596527}
   - component: {fileID: 1839596526}
-  - component: {fileID: 1839596529}
   m_Layer: 5
   m_Name: AmplitudAlta
   m_TagString: Untagged
@@ -4545,20 +4499,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1839596524}
   m_CullTransparentMesh: 1
---- !u!114 &1839596529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839596524}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 9bdef0ee1af7f9142a62fb78561b728f, type: 3}
-  slider: {fileID: 336664854}
 --- !u!1 &1873608631
 GameObject:
   m_ObjectHideFlags: 0
@@ -4702,7 +4642,6 @@ GameObject:
   - component: {fileID: 1990054075}
   - component: {fileID: 1990054074}
   - component: {fileID: 1990054073}
-  - component: {fileID: 1990054076}
   m_Layer: 5
   m_Name: FaseAlta
   m_TagString: Untagged
@@ -4825,20 +4764,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1990054071}
   m_CullTransparentMesh: 1
---- !u!114 &1990054076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1990054071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40c3885f8165d9a4da05012d06b1af39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 767a81ec52cd5be4e977d6130c68caa0, type: 3}
-  slider: {fileID: 336664854}
 --- !u!1 &2020828970
 GameObject:
   m_ObjectHideFlags: 0
