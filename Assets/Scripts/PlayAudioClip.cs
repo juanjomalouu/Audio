@@ -84,6 +84,8 @@ public class PlayAudioClip : MonoBehaviour
         {
             disableSlider();
         }
+        if(!audioSource.isPlaying)
+            disableSlider();
         if (audioBarSlider != null)
             audioBarSlider.value = audioSource.time;
     }

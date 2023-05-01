@@ -24,7 +24,7 @@ public class Draw : MonoBehaviour
         float[] waveform = new float[samples.Length];
         int packSize = (samples.Length / width) + 1;
         int s = 0;
-        float multiplier = 1.0f;
+        float multiplier = 2.0f;
         int middle = height / 2;
         for (int i = 0; i < samples.Length; i += packSize)
         {
@@ -47,13 +47,13 @@ public class Draw : MonoBehaviour
             {
                 if (currentSample + j < height && currentSample + j > 0)
                     tex.SetPixel(x, currentSample + j, col);
-                for (int l = 0; l < Mathf.Abs(diference); l++)
-                {
-                    if (currentSample + j - l < height && currentSample + j - l > 0)
-                        tex.SetPixel(x, currentSample + j - l, col);
-                    if (currentSample + j + l < height && currentSample + j + l > 0)
-                        tex.SetPixel(x, currentSample + j + l, col);
-                }
+                //for (int l = 0; l < Mathf.Abs(diference); l++)
+                //{
+                //    if (currentSample + j - l < height && currentSample + j - l > 0)
+                //        tex.SetPixel(x, currentSample + j - l, col);
+                //    if (currentSample + j + l < height && currentSample + j + l > 0)
+                //        tex.SetPixel(x, currentSample + j + l, col);
+                //}
             }
             if (x!= 0)
                 diference = (currentSample) - ((int)(samples[x-1] * ((float)height) * multiplier));

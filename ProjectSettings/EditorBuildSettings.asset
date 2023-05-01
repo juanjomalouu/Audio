@@ -15,13 +15,13 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelSelector3D.unity
     guid: dfdd0d542dd24754999eda6b602805bd
   - enabled: 1
-    path: Assets/Scenes/2DIntro.unity
+    path: Assets/Scenes/Ejemplos2D.unity
     guid: fd5c341f4089fd54f82865b92363cdbd
   - enabled: 1
-    path: Assets/Scenes/CustomAudio.unity
+    path: Assets/Scenes/TonosPuros.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/AdditiveSynthesis.unity
+    path: Assets/Scenes/Sintetizador Aditivo.unity
     guid: 5107420fc8ebcc64698e77762e1559c1
   - enabled: 1
     path: Assets/Scenes/VocalSounds.unity

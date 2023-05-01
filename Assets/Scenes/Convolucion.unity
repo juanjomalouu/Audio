@@ -900,7 +900,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: adbcb653db6f9b7439aba4e41970a76f, type: 3}
     - target: {fileID: 7756385009437269706, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: showAudioBar
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7756385009437269708, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: m_Name
@@ -1137,7 +1137,7 @@ PrefabInstance:
       objectReference: {fileID: 8300000, guid: 8c6a63231d40ed34da714598ac464f3b, type: 3}
     - target: {fileID: 7756385009437269706, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: showAudioBar
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7756385009437269708, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: m_Name
@@ -1386,7 +1386,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7756385009419834293, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: m_text
-      value: "Convoluci\xF3n"
+      value: "Audio con Convoluci\xF3n"
       objectReference: {fileID: 0}
     - target: {fileID: 7756385009419834293, guid: b182a0ac25d758547bdd0f9e3710795b, type: 3}
       propertyPath: m_fontSize
