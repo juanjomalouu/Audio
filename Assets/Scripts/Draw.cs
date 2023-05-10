@@ -17,7 +17,7 @@ public class Draw : MonoBehaviour
     {
         samples = new float[1024];
     }
-
+    //Crear la textura con la onda
     public Texture2D PaintWaveformSpectrum2(float[] samples, int width, int height, Color col, Color bgcol)
     {
         Texture2D tex = new Texture2D(width, height, TextureFormat.RGBA32, false);
@@ -47,6 +47,7 @@ public class Draw : MonoBehaviour
             {
                 if (currentSample + j < height && currentSample + j > 0)
                     tex.SetPixel(x, currentSample + j, col);
+                //Método para hacer la onda con más resolución (consume mucho)
                 //for (int l = 0; l < Mathf.Abs(diference); l++)
                 //{
                 //    if (currentSample + j - l < height && currentSample + j - l > 0)

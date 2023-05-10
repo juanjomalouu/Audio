@@ -1,3 +1,4 @@
+using System.IO.IsolatedStorage;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.UIElements;
@@ -44,13 +45,25 @@ public class MonoStereo : MonoBehaviour
 
         sliderVolume.onValueChanged.AddListener((v) =>
         {
+            int i = 0;
             foreach (AudioSource source in audioSources)
             {
-                source.volume = v;
+                if(isMono)
+                {
+                    if (playInstr[i % 4] && i/4 == 0)
+                        source.volume = sliderVolume.value;
+                }
+                else
+                {
+                    if (playInstr[i%4] && i/4 == 1)
+                        source.volume = sliderVolume.value;
+                }
+                i++;
             }
+            i = 0;
         });
     }
-
+    //Comprueba si hay algo activado, y si no es así, pone todo a silencio.
     private void Update()
     {
         if(!checkIsSomethingEnable())
@@ -61,6 +74,7 @@ public class MonoStereo : MonoBehaviour
             }
     }
 
+    //Silencia todos audios Stereo y sube el volumen de los Mono. Si ya estaba Mono activado, para la reproducción.
     public void setMonoAudio()
     {
         if (!checkIsSomethingEnable())
@@ -72,7 +86,7 @@ public class MonoStereo : MonoBehaviour
             for(int i = 0; i < audioSources.Length; i++)
             {
                 if(i / 4 == 0 && playInstr[i%4])
-                    audioSources[i].volume = setSliderVolume();
+                    audioSources[i].volume = getSliderVolume();
                 else if (playInstr[i%4])
                     audioSources[i].volume = 0;
             }
@@ -93,7 +107,7 @@ public class MonoStereo : MonoBehaviour
         }
         isMono = true;
     }
-
+    //Silencia todos audios Mono y sube el volumen de los Stereo. Si ya estaba Stereo activado, para la reproducción.
     public void setStereoAudio()
     {
         if(!checkIsSomethingEnable())
@@ -107,7 +121,7 @@ public class MonoStereo : MonoBehaviour
                 if (i / 4 == 0 && playInstr[i % 4])
                     audioSources[i].volume = 0;
                 else if(playInstr[i%4])
-                    audioSources[i].volume = setSliderVolume();
+                    audioSources[i].volume = getSliderVolume();
             }
         }
         if (audioSources[0].isPlaying && !isMono)
@@ -126,7 +140,7 @@ public class MonoStereo : MonoBehaviour
         }
         isMono = false;
     }
-
+    //Comprobar si existe alguna checkbox activada
     public bool checkIsSomethingEnable()
     {
         foreach (bool enable in playInstr)
@@ -136,7 +150,7 @@ public class MonoStereo : MonoBehaviour
         }
         return false;
     }
-
+    //Cambiar el volumen del instrumento para que suene el mono/stereo y no ambos a la vez
     public void setVolumeInstrument(int i)
     {
         if (playInstr[i])
@@ -147,15 +161,16 @@ public class MonoStereo : MonoBehaviour
         else
         {
             if(isMono)
-                audioSources[i].volume = setSliderVolume();
+                audioSources[i].volume = getSliderVolume();
             else
-                audioSources[i + 4].volume = setSliderVolume();
+                audioSources[i + 4].volume = getSliderVolume();
         }
         playInstr[i] = !playInstr[i];
     }
-
-    public float setSliderVolume()
+    //Devuelve el valor que tenga el Slider de volumen
+    public float getSliderVolume()
     {
         return sliderVolume.value;
     }
+
 }

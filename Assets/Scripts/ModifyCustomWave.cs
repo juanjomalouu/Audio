@@ -29,7 +29,7 @@ public class ModifyCustomWave : MonoBehaviour
             {
                 _f[i] = _sliders[i].value;
             }
-
+            #region Seteo de Sliders
             _sliders[0].onValueChanged.AddListener((v) =>
             {
                 _f[0] = v / 1000;
@@ -113,11 +113,12 @@ public class ModifyCustomWave : MonoBehaviour
                 additiveSynthesis.amplitudes[11] = _f[11];
                 additiveSynthesis.paintWave();
             });
+            #endregion
         }
 
 
     }
-
+    //Creación onda sinuidal.
     public void setSinusWave()
     {
         _sliders[0].value = 1.0f * 1000;
@@ -126,7 +127,7 @@ public class ModifyCustomWave : MonoBehaviour
             _sliders[i].value = 0.0f;
         }
     }
-
+    //Creación onda sierra.
     public void setSaw()
     {
         for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
@@ -135,7 +136,7 @@ public class ModifyCustomWave : MonoBehaviour
             _sliders[i].value = x * 1000;
         }
     }
-
+    //Creación onda cuadrada
     public void setSquare()
     {
         for (int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
@@ -146,7 +147,7 @@ public class ModifyCustomWave : MonoBehaviour
             _sliders[i].value = x * 1000;
         }
     }
-
+    //Creación pulso
     public void setPulse()
     { 
         for(int i = 0; i < additiveSynthesis.amplitudes.Length; i++)
@@ -163,19 +164,19 @@ public class ModifyCustomWave : MonoBehaviour
         }
     }
 
-    public void setPulseButton()
-    {
-        if (additiveSynthesis.playingCustomTone)
-            additiveSynthesis.setAdditiveEnable(false);
-        else
-        {
-            additiveSynthesis.setAdditiveEnable(true);
-            additiveSynthesis.drawing = isDrawing;
-            setPulse();
-            audioSource.Play();
-            StartCoroutine(waiter());
-        }
-    }
+    //public void setPulseButton()
+    //{
+    //    if (additiveSynthesis.playingCustomTone)
+    //        additiveSynthesis.setAdditiveEnable(false);
+    //    else
+    //    {
+    //        additiveSynthesis.setAdditiveEnable(true);
+    //        additiveSynthesis.drawing = isDrawing;
+    //        setPulse();
+    //        audioSource.Play();
+    //        StartCoroutine(waiter());
+    //    }
+    //}
 
     //Corutina para hacer que el impulso dure 0.1 segundos
     IEnumerator waiter()

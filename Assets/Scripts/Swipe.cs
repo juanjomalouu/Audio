@@ -24,32 +24,32 @@ public class Swipe : MonoBehaviour, IDragHandler, IEndDragHandler
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        //sceneId = SceneManager.GetActiveScene().buildIndex;
-        //Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
-        //string dragDirection = GetDragDirection(dragVectorDirection).ToString();
-        //Debug.Log("Drag: " + dragVectorDirection);
-        //if (dragDirection == "Left" && Mathf.Abs(dragVectorDirection.y) > 0.02)
-        //{
-        //    if (sceneId + 1 == 7 || sceneId + 1 == 14 || sceneId + 1 == 15)
+        //    sceneId = SceneManager.GetActiveScene().buildIndex;
+        //    Vector3 dragVectorDirection = (eventData.position - eventData.pressPosition).normalized;
+        //    string dragDirection = GetDragDirection(dragVectorDirection).ToString();
+        //    Debug.Log("Drag: " + dragVectorDirection);
+        //    if (dragDirection == "Left" && Mathf.Abs(dragVectorDirection.y) > 0.04)
         //    {
-        //        SceneManager.LoadScene(0);
+        //        if (sceneId + 1 == 7 || sceneId + 1 == 14 || sceneId + 1 == 15)
+        //        {
+        //            SceneManager.LoadScene(0);
+        //        }
+        //        else
+        //        {
+        //            SceneManager.LoadScene(sceneId + 1);
+        //        }
         //    }
-        //    else
+        //    else if (dragDirection == "Right" && Mathf.Abs(dragVectorDirection.y) > 0.04)
         //    {
-        //        SceneManager.LoadScene(sceneId + 1);
+        //        if (sceneId - 1 == 6 || sceneId - 1 == 13 || sceneId - 1 == 2)
+        //        {
+        //            SceneManager.LoadScene(0);
+        //        }
+        //        else
+        //        {
+        //            SceneManager.LoadScene(sceneId - 1);
+        //        }
         //    }
-        //}
-        //else if (dragDirection == "Right" && Mathf.Abs(dragVectorDirection.y) > 0.02)
-        //{
-        //    if (sceneId - 1 == 6 || sceneId - 1 == 13 || sceneId - 1 == 2)
-        //    {
-        //        SceneManager.LoadScene(0);
-        //    }
-        //    else
-        //    {
-        //        SceneManager.LoadScene(sceneId - 1);
-        //    }
-        //}
     }
     public void OnDrag(PointerEventData eventData)
     {

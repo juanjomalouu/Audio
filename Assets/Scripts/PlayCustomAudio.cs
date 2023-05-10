@@ -11,18 +11,22 @@ public class PlayCustomAudio : MonoBehaviour
     public AudioClip audioClip;
     private AdditiveSynthesis adSynthesis;
 
+    //Sliders para modificar los valores
     [SerializeField] private Slider _sliderFrequency;
     [SerializeField] private Slider _sliderAmplitude;
     [SerializeField] private Slider _sliderPhase;
 
+    //Variables customizadas con las que comenzar
     [SerializeField] private int _customFrequency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
 
+    //Variables mínimas
     [SerializeField] private int _lowFrequency;
     [SerializeField] private float _lowAmplitude;
     [SerializeField] private float _lowPhase;
 
+    //Variables máximas
     [SerializeField] private int _highFrequency;
     [SerializeField] private float _highAmplitude;
     [SerializeField] private float _highPhase;
@@ -34,9 +38,6 @@ public class PlayCustomAudio : MonoBehaviour
     private bool lowPhase;
     private bool highPhase;
     private bool playCustom;
-
-
-    //[SerializeField] private Slider slider;
 
     void Start()
     {
@@ -74,7 +75,7 @@ public class PlayCustomAudio : MonoBehaviour
              });
         }
     }
-
+    //Modificar Slider y bajar la frecuencia
     public void playLowFrequency()
     {
         if (!lowFreq)
@@ -91,7 +92,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customFrequency = _lowFrequency;
         adSynthesis.Frequency = _customFrequency;
     }
-
+    //Modificar Slider y subir la frecuencia
     public void playHighFrequency()
     {
         if (!highFreq)
@@ -108,6 +109,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customFrequency = _highFrequency;
         adSynthesis.Frequency = _highFrequency;
     }
+    //Modificar Slider y bajar la amplitud
     public void playLowAmplitude()
     {
         if (!lowAmplitude)
@@ -124,7 +126,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customAmplitude = _lowAmplitude;
         adSynthesis.Amplitude = _lowAmplitude;
     }
-
+    //Modificar Slider y subir la amplitud.
     public void playHighAmplitude()
     {
         if (!highAmplitude)
@@ -141,7 +143,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customAmplitude = _highAmplitude;
         adSynthesis.Amplitude = _highAmplitude;
     }
-
+    //Modificar Slider y poner una fase baja.
     public void playLowPhase()
     {
         if (!lowPhase)
@@ -158,7 +160,7 @@ public class PlayCustomAudio : MonoBehaviour
         _customPhase = _lowPhase * MathF.PI;
         adSynthesis.Phase = _lowPhase * MathF.PI;
     }
-
+    //Modificar Slider y poner una fase alta.
     public void playHighPhase()
     {
         if (!highPhase)
@@ -176,7 +178,7 @@ public class PlayCustomAudio : MonoBehaviour
         adSynthesis.Phase = _highPhase;
     }
 
-
+    //Poner a true la emisión de audio procedural customizado o a false dependiendo de si ya estaba activado.
     public void PlayCustomAudioADSynthesis()
     {
         if (!playCustom && !getSomethingTrue())
@@ -203,7 +205,7 @@ public class PlayCustomAudio : MonoBehaviour
         playCustom = false;
         return true;
     }
-
+    //Comprobar si hay algo  ejecutandose
     private bool getSomethingTrue()
     {
         return lowAmplitude || lowFreq || lowPhase || highAmplitude || highFreq || highPhase;

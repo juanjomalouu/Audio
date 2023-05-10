@@ -6,6 +6,7 @@ TagManager:
   tags:
   - AudioSource
   - SliderBar
+  - MonoStereo
   layers:
   - Default
   - TransparentFX

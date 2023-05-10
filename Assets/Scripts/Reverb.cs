@@ -7,7 +7,7 @@ public class Reverb : MonoBehaviour
 
     public AudioSource audioSource;
     private AudioReverbFilter audioReverb;
-    public bool isDirect = false;
+    private bool isDirect = false;
     private bool isEarly = false;
     private bool isTail = false;
     [SerializeField] AudioClip clip;
@@ -19,7 +19,7 @@ public class Reverb : MonoBehaviour
         audioSource.clip = clip;
         audioReverb.dryLevel = -10000;
     }
-
+    //Activar/desactivar reproducción
     public void playStop()
     {
         if(!audioSource.isPlaying)
@@ -33,7 +33,7 @@ public class Reverb : MonoBehaviour
         }
 
     }
-
+    //Activar/desactivar sonido directo
     public void toggleReverbDirect()
     {
         if (!isDirect)
@@ -44,7 +44,7 @@ public class Reverb : MonoBehaviour
             audioReverb.dryLevel = -10000;
         isDirect = !isDirect;
     }
-
+    //Activar/desactivar primeras reflexiones
     public void toggleReverbEarly()
     {
         if (!isEarly)
@@ -56,7 +56,7 @@ public class Reverb : MonoBehaviour
             audioReverb.reflectionsLevel = -10000;
         isEarly = !isEarly;
     }
-
+    //Activar o desactivar cola de reverberación
     public void toggleReverbTail()
     {
         if (!isTail)

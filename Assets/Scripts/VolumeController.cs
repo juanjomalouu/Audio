@@ -15,7 +15,7 @@ public class VolumeController : MonoBehaviour
     [SerializeField] private ResonanceAudioSource audioSource;
     
 
-    // Start is called before the first frame update
+    // Subir el volumen de la escena, diferenciando si se trata de una escena Ambisonics o no.
     void Start()
     {
         mixer.SetFloat("exposedVolumeParam", Mathf.Log10(_SliderVolume.value) * 20);
@@ -23,7 +23,6 @@ public class VolumeController : MonoBehaviour
         {
             _SliderVolume.value = 0;
             audioSource = GameObject.FindGameObjectWithTag("AudioSource").GetComponent<ResonanceAudioSource>();
-            Debug.Log("Ambisonics Scene");
             _SliderVolume.maxValue = 10.0f;
             _SliderVolume.minValue = -50.0f;
             _SliderVolume.onValueChanged.AddListener((v) =>

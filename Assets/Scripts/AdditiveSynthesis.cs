@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using static System.Net.Mime.MediaTypeNames;
@@ -12,6 +13,7 @@ public class AdditiveSynthesis : MonoBehaviour
     public int width = 260;
     public int height = 200;
 
+    //Numero de amplitudes que habrá modificables
     const int nPartials = 12; // Including f0
 
     public float[] amplitudes;
@@ -24,7 +26,6 @@ public class AdditiveSynthesis : MonoBehaviour
     public float previousPhase = 0.0f;
     public float sampleRate;
 
-    float t = 0;
     float timestep;
     
     public float[] samples;
@@ -47,12 +48,6 @@ public class AdditiveSynthesis : MonoBehaviour
     private double chunkTime;
     private double dspTimeStep;
 
-    //Convolution
-    [SerializeField] AudioClip p4impulse;
-    [SerializeField] AudioClip p4brir;
-    [SerializeField] AudioClip p4dry;
-    [SerializeField] AudioClip p4wet;
-
     public bool drawing = true;
 
     private void Awake()
@@ -68,26 +63,29 @@ public class AdditiveSynthesis : MonoBehaviour
         paintWave();
     }
 
+
+    //Función con la que pintar la onda de la pantalla 'Additive Synthesis'
     public void paintWave()
     {
         float j = 0;
-        float[] samples2 = new float[1024];
-        for (int i = 0; i < samples2.Length; i++)
+        float[] samples_paint = new float[1024];
+        for (int i = 0; i < samples_paint.Length; i++)
         {
-            samples2[i] = AddPartials2(j, amplitudes);
+            samples_paint[i] = AddPartials_draw(j, amplitudes);
 
             j += timestep;
         }
         if(drawing)
         {
-            Debug.Log("Drawing");
-            Texture2D texture = draw.PaintWaveformSpectrum2(samples2, width, height, waveformColor, bgColor);
+            Texture2D texture = draw.PaintWaveformSpectrum2(samples_paint, width, height, waveformColor, bgColor);
             draw.img.overrideSprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0.5f));
         }
     }
 
+    //Creación y asignación del tono customizado.
     private void OnAudioFilterRead(float[] data, int channels)
     {
+        //Tono customizado
         if(playingCustomTone)
         {
             int nsamples = data.Length / channels;
@@ -99,7 +97,7 @@ public class AdditiveSynthesis : MonoBehaviour
                     data[i * channels + j] = samples[i];
                 }
             }
-        }
+        }//Implementación del tono vocal
         else
         {
             // DSP timing
@@ -128,7 +126,7 @@ public class AdditiveSynthesis : MonoBehaviour
                         data[i * channels + j] = currentSample;
                     }
                 }
-            }
+            }//Implementación de la respiración (ruido blanco)
             if(playBreath)
             {
                 System.Random random = new System.Random();
@@ -139,7 +137,7 @@ public class AdditiveSynthesis : MonoBehaviour
             }
         }
     }
-
+    //Cálculo del tono customizado
     float AddPartials(float[] ampls)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
@@ -148,6 +146,7 @@ public class AdditiveSynthesis : MonoBehaviour
         Phase += increment;
         Phase += phaseModification;
         updateAmplitudes();
+        //Control de la fase
         if (Phase > 2.0f * Mathf.PI) Phase %= 2.0f * Mathf.PI;
         for (int i = 0; i < nPartials; i++)
         {
@@ -157,6 +156,7 @@ public class AdditiveSynthesis : MonoBehaviour
         return sample;
     }
 
+    //Actualización de las amplitudes de manera suave, para evitar clicks.
     void updateAmplitudes()
     {
         for (int i = 0; i < amplitudes.Length; i++)
@@ -176,7 +176,8 @@ public class AdditiveSynthesis : MonoBehaviour
         }
     }
 
-    float AddPartials2(float t, float[] amps)
+    //Mismo método que AddPartials, pero evitando cálculos innecesarios y utilizando variables distintas para que no afecte al cálculo del sonido.
+    float AddPartials_draw(float t, float[] amps)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
         float sample = 0.0f;
@@ -188,36 +189,56 @@ public class AdditiveSynthesis : MonoBehaviour
         return sample;
     }
 
-    public void changeVocal()
+    //Invertir el valor booleano de playVocalCords
+    public void changeVocal(bool disable = false)
     {
+        if (disable)
+        {
+            playBreath = false;
+            playingCustomTone = false;
+        }
+        audioSource.clip = null;
         audioSource.Play();
         playVocalCords = !playVocalCords;
     }
-    public void changeBreath()
+    //Invertir el valor booleano de changeBreath
+    public void changeBreath(bool disable = false)
     {
-        GameObject newButton;
+        if (disable)
+        {
+            playVocalCords = false;
+            playingCustomTone = false;
+        }
+        audioSource.clip = null;
         audioSource.Play();
         playBreath = !playBreath;
             
     }
-
+    //Parar reproducción de tracto vocal.
     public void StopVocals()
     {
         playBreath = false;
         playVocalCords = false;
         audioSource.Stop();
     }
-
+    //Activar la reproducción de audio procedural y evitar aplicarla a un clip ya puesto.
     public void setAdditiveEnable(bool isEnable)
     {
-        if(!playingCustomTone)
+        if(isEnable && !playingCustomTone)
         {
             audioSource.clip = null;
         }
         playingCustomTone = isEnable;
     }
-    public void toggleAdditive()
+    //Invertir el valor del audio procedural
+    public void toggleAdditive(bool disableVocals = false)
     {
+        if(!playingCustomTone)
+            audioSource.clip = null;
+        if (disableVocals)
+        {
+            playBreath = playVocalCords = false;
+        }
         playingCustomTone = !playingCustomTone;
     }
 }

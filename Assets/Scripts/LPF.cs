@@ -29,7 +29,7 @@ public class LPF : MonoBehaviour
         });
     }
 
-    // Update is called once per frame
+    // Intercambio entre parar/reproducir el audio
     public void PlayStop()
     {
         if (audioSource.isPlaying)
@@ -42,6 +42,7 @@ public class LPF : MonoBehaviour
         }
     }
 
+    //Modificación del filtro LPF que se aplica al audio y escritura de la información.
     private void changeLPF(float v)
     {
         audioLPF.cutoffFrequency = v;

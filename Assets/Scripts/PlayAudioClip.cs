@@ -11,7 +11,7 @@ public class PlayAudioClip : MonoBehaviour
 
     public AudioClip audioClip;
     private GameObject audio;
-    private AudioSource audioSource;
+    [SerializeField] private AudioSource audioSource;
     private AdditiveSynthesis additiveSynthesis;
 
     [SerializeField] private bool showAudioBar = true;
@@ -32,18 +32,34 @@ public class PlayAudioClip : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
+    // Comprobación de si el audioclip actual es distinto al que posee el script en el editor
+    // -> Si es idéntico y está siendo reproducido, parará
+    // -> Si es idéntico y no se está reproduciendo, empezará a reproducirse.
+    // -> Si es distinto, cambiará el audioClip y comenzará la reproducción.
     public void playClip()
     {
+        if (additiveSynthesis != null)
+        {
+            additiveSynthesis.StopVocals();
+
+            additiveSynthesis.setAdditiveEnable(false);
+        }
         if (audioSource.clip != audioClip)
         {
+            Debug.Log("ea");
             audioSource.clip = audioClip;
             audioSource.Play();
         }
         else if (audioSource.isPlaying)
+        {
+            Debug.Log("1");
             audioSource.Stop();
+        }
         else
+        {
+            Debug.Log("2");
             audioSource.Play();
+        }
         if(showAudioBar)
         {
             if(audioSource.isPlaying)
@@ -52,10 +68,7 @@ public class PlayAudioClip : MonoBehaviour
                 disableSlider();
         }
             
-        if(additiveSynthesis!= null)
-        {
-            additiveSynthesis.setAdditiveEnable(false);
-        }
+
     }
 
     private void Update()
@@ -63,7 +76,7 @@ public class PlayAudioClip : MonoBehaviour
         if(showAudioBar)
             updateSlider();
     }
-
+    //Activar Slider de reproducción
     private void enableSlider()
     {
         audioBarSlider.gameObject.SetActive(true);
@@ -71,13 +84,13 @@ public class PlayAudioClip : MonoBehaviour
         audioBarSlider.value = 0;
         textLabel.gameObject.SetActive(false);
     }
-
+    //Desactivar Slider de reproducción
     private void disableSlider()
     {
         audioBarSlider.gameObject.SetActive(false);
         textLabel.gameObject.SetActive(true);
     }
-
+    //Actualizar la progresión del slider de reproducción
     private void updateSlider()
     {
         if ((additiveSynthesis != null && additiveSynthesis.playingCustomTone) || audioSource.clip != audioClip)

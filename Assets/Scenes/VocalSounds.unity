@@ -321,10 +321,6 @@ MonoBehaviour:
   sampleRate: 0
   samples: []
   playingCustomTone: 0
-  p4impulse: {fileID: 0}
-  p4brir: {fileID: 0}
-  p4dry: {fileID: 0}
-  p4wet: {fileID: 0}
   drawing: 0
 --- !u!1 &229456482
 GameObject:
@@ -489,7 +485,7 @@ MonoBehaviour:
       - m_Target: {fileID: 146965835}
         m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
         m_MethodName: changeVocal
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1244,7 +1240,7 @@ MonoBehaviour:
       - m_Target: {fileID: 146965835}
         m_TargetAssemblyTypeName: AdditiveSynthesis, Assembly-CSharp
         m_MethodName: changeBreath
-        m_Mode: 1
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
