@@ -6,7 +6,7 @@ using Slider = UnityEngine.UI.Slider;
 
 public class MonoStereo : MonoBehaviour
 {
-    // Start is called before the first frame update
+    
     [SerializeField] AudioSource[] audioSources;
     [SerializeField] AudioClip instrument1Mono;
     [SerializeField] AudioClip instrument2Mono;
@@ -22,8 +22,10 @@ public class MonoStereo : MonoBehaviour
 
     bool isMono = false;
 
+    // Start is called before the first frame update
     public void Start()
     {
+        // Assign audio clips to audio sources
         audioSources = GameObject.FindGameObjectWithTag("AudioSource").GetComponents<AudioSource>();
         audioSources[0].clip = instrument1Mono;
         audioSources[1].clip = instrument2Mono;
@@ -33,16 +35,21 @@ public class MonoStereo : MonoBehaviour
         audioSources[5].clip = instrument2Stereo;
         audioSources[6].clip = instrument3Stereo;
         audioSources[7].clip = instrument4Stereo;
-        foreach(AudioSource source in audioSources)
+
+        // Initialize volume to 0 for all audio sources
+        foreach (AudioSource source in audioSources)
         {
             source.volume = 0.0f;
         }
+
+        // Initialize playInstr array
         playInstr = new bool[4];
         for(int i = 0; i < playInstr.Length; i++)
         {
             playInstr[i] = false;
         }
 
+        // Add listener to the volume slider
         sliderVolume.onValueChanged.AddListener((v) =>
         {
             int i = 0;
@@ -63,7 +70,8 @@ public class MonoStereo : MonoBehaviour
             i = 0;
         });
     }
-    //Comprueba si hay algo activado, y si no es así, pone todo a silencio.
+
+    // Update is called once per frame
     private void Update()
     {
         if(!checkIsSomethingEnable())
@@ -74,7 +82,10 @@ public class MonoStereo : MonoBehaviour
             }
     }
 
-    //Silencia todos audios Stereo y sube el volumen de los Mono. Si ya estaba Mono activado, para la reproducción.
+    /// <summary>
+    /// Silences all stereo audio and increases the volume of mono audio.
+    /// If mono was already enabled, stops the playback.
+    /// </summary>
     public void setMonoAudio()
     {
         if (!checkIsSomethingEnable())
@@ -107,7 +118,11 @@ public class MonoStereo : MonoBehaviour
         }
         isMono = true;
     }
-    //Silencia todos audios Mono y sube el volumen de los Stereo. Si ya estaba Stereo activado, para la reproducción.
+
+    /// <summary>
+    /// Silences all mono audio and increases the volume of stereo audio.
+    /// If stereo was already enabled, stops the playback.
+    /// </summary>
     public void setStereoAudio()
     {
         if(!checkIsSomethingEnable())
@@ -140,7 +155,11 @@ public class MonoStereo : MonoBehaviour
         }
         isMono = false;
     }
-    //Comprobar si existe alguna checkbox activada
+
+    /// <summary>
+    /// Checks if any instrument is enabled.
+    /// </summary>
+    /// <returns>True if any instrument is enabled, False otherwise.</returns>
     public bool checkIsSomethingEnable()
     {
         foreach (bool enable in playInstr)
@@ -150,7 +169,11 @@ public class MonoStereo : MonoBehaviour
         }
         return false;
     }
-    //Cambiar el volumen del instrumento para que suene el mono/stereo y no ambos a la vez
+
+    /// <summary>
+    /// Sets the volume of the instrument to play in mono/stereo and not both at the same time.
+    /// </summary>
+    /// <param name="i">Index of the instrument</param>
     public void setVolumeInstrument(int i)
     {
         if (playInstr[i])
@@ -167,7 +190,11 @@ public class MonoStereo : MonoBehaviour
         }
         playInstr[i] = !playInstr[i];
     }
-    //Devuelve el valor que tenga el Slider de volumen
+
+    /// <summary>
+    /// Returns the value of the volume slider.
+    /// </summary>
+    /// <returns>Value of the volume slider</returns>
     public float getSliderVolume()
     {
         return sliderVolume.value;

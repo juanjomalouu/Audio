@@ -5,7 +5,6 @@ using UnityEngine.UIElements;
 using Slider = UnityEngine.UI.Slider;
 public class LPF : MonoBehaviour
 {
-    // Start is called before the first frame update
     [SerializeField] Slider freqSlider;
     private AudioLowPassFilter audioLPF;
     private double sampleRate;
@@ -14,7 +13,7 @@ public class LPF : MonoBehaviour
     [SerializeField] TextMeshProUGUI labelFreq;
     [SerializeField] TextMeshProUGUI labelDistance;
 
-
+    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -29,7 +28,9 @@ public class LPF : MonoBehaviour
         });
     }
 
-    // Intercambio entre parar/reproducir el audio
+    /// <summary>
+    /// Toggles the playback of the audio.
+    /// </summary>
     public void PlayStop()
     {
         if (audioSource.isPlaying)
@@ -42,7 +43,10 @@ public class LPF : MonoBehaviour
         }
     }
 
-    //Modificación del filtro LPF que se aplica al audio y escritura de la información.
+    /// <summary>
+    /// Modifies the LPF filter applied to the audio and updates the displayed information.
+    /// </summary>
+    /// <param name="v">The new cutoff frequency value.</param>
     private void changeLPF(float v)
     {
         audioLPF.cutoffFrequency = v;

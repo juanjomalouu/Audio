@@ -13,9 +13,9 @@ public class VolumeController : MonoBehaviour
     [SerializeField] private Slider _SliderVolume = null;
     public AudioMixer mixer;
     [SerializeField] private ResonanceAudioSource audioSource;
-    
 
-    // Subir el volumen de la escena, diferenciando si se trata de una escena Ambisonics o no.
+
+    // Increase the volume of the scene, differentiating between Ambisonics and non-Ambisonics scenes.
     void Start()
     {
         mixer.SetFloat("exposedVolumeParam", Mathf.Log10(_SliderVolume.value) * 20);

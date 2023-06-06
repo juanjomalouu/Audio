@@ -6,27 +6,26 @@ using UnityEngine.UI;
 
 public class PlayCustomAudio : MonoBehaviour
 {
-    // Start is called before the first frame update
     private AudioSource audioSource;
     public AudioClip audioClip;
     private AdditiveSynthesis adSynthesis;
 
-    //Sliders para modificar los valores
+    // Sliders to modify the values
     [SerializeField] private Slider _sliderFrequency;
     [SerializeField] private Slider _sliderAmplitude;
     [SerializeField] private Slider _sliderPhase;
 
-    //Variables customizadas con las que comenzar
+    // Customizable variables to start with
     [SerializeField] private int _customFrequency;
     [SerializeField] private float _customAmplitude;
     [SerializeField] private float _customPhase;
 
-    //Variables mínimas
+    // Minimum variables
     [SerializeField] private int _lowFrequency;
     [SerializeField] private float _lowAmplitude;
     [SerializeField] private float _lowPhase;
 
-    //Variables máximas
+    // Maximum variables
     [SerializeField] private int _highFrequency;
     [SerializeField] private float _highAmplitude;
     [SerializeField] private float _highPhase;
@@ -55,7 +54,6 @@ public class PlayCustomAudio : MonoBehaviour
                 _customAmplitude = v;
                 audioSource.volume = _customAmplitude;
                 adSynthesis.Amplitude = _customAmplitude;
-                //slider.value = _customAmplitude;
             });
         }
         if (_sliderFrequency != null)
@@ -75,7 +73,10 @@ public class PlayCustomAudio : MonoBehaviour
              });
         }
     }
-    //Modificar Slider y bajar la frecuencia
+
+    /// <summary>
+    /// Modifies the frequency slider and sets it to the minimum frequency.
+    /// </summary>
     public void playLowFrequency()
     {
         if (!lowFreq)
@@ -92,7 +93,10 @@ public class PlayCustomAudio : MonoBehaviour
         _customFrequency = _lowFrequency;
         adSynthesis.Frequency = _customFrequency;
     }
-    //Modificar Slider y subir la frecuencia
+
+    /// <summary>
+    /// Modifies the frequency slider and sets it to the maximum frequency.
+    /// </summary>
     public void playHighFrequency()
     {
         if (!highFreq)
@@ -109,7 +113,10 @@ public class PlayCustomAudio : MonoBehaviour
         _customFrequency = _highFrequency;
         adSynthesis.Frequency = _highFrequency;
     }
-    //Modificar Slider y bajar la amplitud
+
+    /// <summary>
+    /// Modifies the amplitude slider and sets it to the minimum amplitude.
+    /// </summary>
     public void playLowAmplitude()
     {
         if (!lowAmplitude)
@@ -126,7 +133,10 @@ public class PlayCustomAudio : MonoBehaviour
         _customAmplitude = _lowAmplitude;
         adSynthesis.Amplitude = _lowAmplitude;
     }
-    //Modificar Slider y subir la amplitud.
+
+    /// <summary>
+    /// Modifies the amplitude slider and sets it to the maximum amplitude.
+    /// </summary>
     public void playHighAmplitude()
     {
         if (!highAmplitude)
@@ -143,7 +153,10 @@ public class PlayCustomAudio : MonoBehaviour
         _customAmplitude = _highAmplitude;
         adSynthesis.Amplitude = _highAmplitude;
     }
-    //Modificar Slider y poner una fase baja.
+
+    /// <summary>
+    /// Modifies the phase slider and sets it to the minimum phase.
+    /// </summary>
     public void playLowPhase()
     {
         if (!lowPhase)
@@ -160,7 +173,10 @@ public class PlayCustomAudio : MonoBehaviour
         _customPhase = _lowPhase * MathF.PI;
         adSynthesis.Phase = _lowPhase * MathF.PI;
     }
-    //Modificar Slider y poner una fase alta.
+
+    /// <summary>
+    /// Modifies the phase slider and sets it to the maximum phase.
+    /// </summary>
     public void playHighPhase()
     {
         if (!highPhase)
@@ -178,7 +194,9 @@ public class PlayCustomAudio : MonoBehaviour
         adSynthesis.Phase = _highPhase;
     }
 
-    //Poner a true la emisión de audio procedural customizado o a false dependiendo de si ya estaba activado.
+    /// <summary>
+    /// Sets the additive synthesis to play the custom audio or stops it depending on the current state.
+    /// </summary>
     public void PlayCustomAudioADSynthesis()
     {
         if (!playCustom && !getSomethingTrue())
@@ -205,7 +223,10 @@ public class PlayCustomAudio : MonoBehaviour
         playCustom = false;
         return true;
     }
-    //Comprobar si hay algo  ejecutandose
+
+    /// <summary>
+    /// Checks if any modification is currently playing.
+    /// </summary>
     private bool getSomethingTrue()
     {
         return lowAmplitude || lowFreq || lowPhase || highAmplitude || highFreq || highPhase;

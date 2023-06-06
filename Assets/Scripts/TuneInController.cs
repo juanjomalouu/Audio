@@ -28,6 +28,9 @@ public class TuneInController : MonoBehaviour
         API_3DTI_HL.DisableNonLinearAttenuation(T_ear.BOTH);
     }
 
+    /// <summary>
+    /// Plays the audioclip
+    /// </summary>
     public void playClip()
     {
         if (audioSource.clip != audioClip)
@@ -41,7 +44,9 @@ public class TuneInController : MonoBehaviour
             audioSource.Play();
     }
 
-
+    /// <summary>
+    /// Enable/Disable Non Linear Attenuation.
+    /// </summary>
     public void ToggleConductive()
     {
         if(!conductive)
@@ -60,6 +65,10 @@ public class TuneInController : MonoBehaviour
         checkIfEverythingDisable(); 
     }
 
+
+    /// <summary>
+    /// Enable/Disable Frequency Smearing Simulation and Temporal Distortion Simulation.
+    /// </summary>
     public void ToggleNeuro()
     {
         if (!neurosensor)
@@ -77,6 +86,10 @@ public class TuneInController : MonoBehaviour
         checkIfEverythingDisable();
     }
 
+
+    /// <summary>
+    /// Enable/Disable Hearing Aid
+    /// </summary>
     public void ToggleHA()
     {
         if (!hearingAid && (conductive))
@@ -92,6 +105,10 @@ public class TuneInController : MonoBehaviour
         }
     }
 
+
+    /// <summary>
+    /// Checks if HearingLoss or Neurosensitive deaf is disable
+    /// </summary>
     public void checkIfEverythingDisable()
     {
         if (!neurosensor && !conductive)

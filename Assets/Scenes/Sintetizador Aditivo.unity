@@ -2973,11 +2973,11 @@ MonoBehaviour:
   - 0
   newAmplitudes: []
   Frequency: 480
+  sampleRate: 0
   Amplitude: 1
   Phase: 0
-  phaseModification: 0
   previousPhase: 0
-  sampleRate: 0
+  phaseModification: 0
   samples: []
   playingCustomTone: 0
   drawing: 1

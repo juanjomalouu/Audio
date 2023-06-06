@@ -277,6 +277,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 75beec9ac1199a34d81e526dea9491f3, type: 3}
   audioSource: {fileID: 0}
+  additiveSynthesis: {fileID: 0}
   showAudioBar: 0
   audioBarSlider: {fileID: 0}
   textLabel: {fileID: 0}
@@ -646,6 +647,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: 90cebf834806bf546a9694bfe444fc6c, type: 3}
   audioSource: {fileID: 0}
+  additiveSynthesis: {fileID: 0}
   showAudioBar: 0
   audioBarSlider: {fileID: 0}
   textLabel: {fileID: 0}
@@ -1218,7 +1220,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9a28aa773900bce45aa5719138a2925d, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
@@ -1337,11 +1339,11 @@ MonoBehaviour:
   amplitudes: []
   newAmplitudes: []
   Frequency: 480
+  sampleRate: 0
   Amplitude: 1
   Phase: 0
-  phaseModification: 0
   previousPhase: 0
-  sampleRate: 0
+  phaseModification: 0
   samples: []
   playingCustomTone: 0
   drawing: 0
@@ -1562,6 +1564,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioClip: {fileID: 8300000, guid: b03ffee24244cd84b91978fb4bb1fa97, type: 3}
   audioSource: {fileID: 0}
+  additiveSynthesis: {fileID: 0}
   showAudioBar: 0
   audioBarSlider: {fileID: 0}
   textLabel: {fileID: 0}

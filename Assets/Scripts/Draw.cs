@@ -17,7 +17,16 @@ public class Draw : MonoBehaviour
     {
         samples = new float[1024];
     }
-    //Crear la textura con la onda
+
+    /// <summary>
+    /// Create the texture with the waveform.
+    /// </summary>
+    /// <param name="samples">Array of audio samples.</param>
+    /// <param name="width">Width of the texture.</param>
+    /// <param name="height">Height of the texture.</param>
+    /// <param name="col">Color of the waveform.</param>
+    /// <param name="bgcol">Background color of the texture.</param>
+    /// <returns>The generated Texture2D with the waveform.</returns>
     public Texture2D PaintWaveformSpectrum2(float[] samples, int width, int height, Color col, Color bgcol)
     {
         Texture2D tex = new Texture2D(width, height, TextureFormat.RGBA32, false);
@@ -26,12 +35,14 @@ public class Draw : MonoBehaviour
         int s = 0;
         float multiplier = 2.0f;
         int middle = height / 2;
+
+        // Create the waveform array with sampled audio data
         for (int i = 0; i < samples.Length; i += packSize)
         {
             waveform[i] = samples[i];
             s++;
         }
-
+        // Fill the texture with the background color
         for (int x = 0; x < width; x++)
         {
             for (int y = 0; y < height; y++)
@@ -43,11 +54,13 @@ public class Draw : MonoBehaviour
         for (int x = 0; x < waveform.Length; x++)
         {
             int currentSample = (int)(samples[x] * ((float)height) * multiplier);
+
+            // Draw the waveform lines within the specified range
             for (int j = middle - dif; j < middle + dif; j++)
             {
                 if (currentSample + j < height && currentSample + j > 0)
                     tex.SetPixel(x, currentSample + j, col);
-                //Método para hacer la onda con más resolución (consume mucho)
+                // Method to create waveform with higher resolution (resource-intensive)
                 //for (int l = 0; l < Mathf.Abs(diference); l++)
                 //{
                 //    if (currentSample + j - l < height && currentSample + j - l > 0)

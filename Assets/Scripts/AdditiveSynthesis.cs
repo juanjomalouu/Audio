@@ -13,18 +13,18 @@ public class AdditiveSynthesis : MonoBehaviour
     public int width = 260;
     public int height = 200;
 
-    //Numero de amplitudes que habrá modificables
+    //Number of modifiable amplitudes
     const int nPartials = 12; // Including f0
 
     public float[] amplitudes;
     public float[] newAmplitudes;
 
     public int Frequency = 480;
+    public float sampleRate;
     public float Amplitude = 1.0f;
     public float Phase = 0.0f;
-    public float phaseModification = 0.0f;
     public float previousPhase = 0.0f;
-    public float sampleRate;
+    public float phaseModification = 0.0f;
 
     float timestep;
     
@@ -64,7 +64,9 @@ public class AdditiveSynthesis : MonoBehaviour
     }
 
 
-    //Función con la que pintar la onda de la pantalla 'Additive Synthesis'
+    /// <summary>
+    /// Paints the waveform on the 'Additive Synthesis' screen.
+    /// </summary>
     public void paintWave()
     {
         float j = 0;
@@ -82,11 +84,15 @@ public class AdditiveSynthesis : MonoBehaviour
         }
     }
 
-    //Creación y asignación del tono customizado.
+    /// <summary>
+    /// Creates and assigns the custom tone.
+    /// </summary>
+    /// <param name="data">The audio data.</param>
+    /// <param name="channels">The number of audio channels.</param>
     private void OnAudioFilterRead(float[] data, int channels)
     {
-        //Tono customizado
-        if(playingCustomTone)
+        // Custom tone
+        if (playingCustomTone)
         {
             int nsamples = data.Length / channels;
             for (int i = 0; i < nsamples; i += channels)
@@ -97,7 +103,8 @@ public class AdditiveSynthesis : MonoBehaviour
                     data[i * channels + j] = samples[i];
                 }
             }
-        }//Implementación del tono vocal
+        }
+        // Vocal implementation
         else
         {
             // DSP timing
@@ -126,8 +133,9 @@ public class AdditiveSynthesis : MonoBehaviour
                         data[i * channels + j] = currentSample;
                     }
                 }
-            }//Implementación de la respiración (ruido blanco)
-            if(playBreath)
+            }
+            // Breath implementation (white noise)
+            if (playBreath)
             {
                 System.Random random = new System.Random();
                 for (int i = 0; i < data.Length; i++)
@@ -137,7 +145,11 @@ public class AdditiveSynthesis : MonoBehaviour
             }
         }
     }
-    //Cálculo del tono customizado
+    /// <summary>
+    /// Calculates the custom tone based on the amplitudes.
+    /// </summary>
+    /// <param name="ampls">The array of amplitudes.</param>
+    /// <returns>The calculated sample.</returns>
     float AddPartials(float[] ampls)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
@@ -146,7 +158,7 @@ public class AdditiveSynthesis : MonoBehaviour
         Phase += increment;
         Phase += phaseModification;
         updateAmplitudes();
-        //Control de la fase
+        // Phase Control
         if (Phase > 2.0f * Mathf.PI) Phase %= 2.0f * Mathf.PI;
         for (int i = 0; i < nPartials; i++)
         {
@@ -156,7 +168,9 @@ public class AdditiveSynthesis : MonoBehaviour
         return sample;
     }
 
-    //Actualización de las amplitudes de manera suave, para evitar clicks.
+    /// <summary>
+    /// Updates the amplitudes smoothly to avoid clicks.
+    /// </summary>
     void updateAmplitudes()
     {
         for (int i = 0; i < amplitudes.Length; i++)
@@ -176,7 +190,12 @@ public class AdditiveSynthesis : MonoBehaviour
         }
     }
 
-    //Mismo método que AddPartials, pero evitando cálculos innecesarios y utilizando variables distintas para que no afecte al cálculo del sonido.
+    /// <summary>
+    /// Calculates the custom tone for drawing purposes, without affecting the sound calculation.
+    /// </summary>
+    /// <param name="t">The time parameter.</param>
+    /// <param name="amps">The array of amplitudes.</param>
+    /// <returns>The calculated sample.</returns>
     float AddPartials_draw(float t, float[] amps)
     {
         float partialAmplitude = Amplitude / (float)nPartials;
@@ -189,7 +208,10 @@ public class AdditiveSynthesis : MonoBehaviour
         return sample;
     }
 
-    //Invertir el valor booleano de playVocalCords
+    /// <summary>
+    /// Inverts the boolean value of playVocalCords.
+    /// </summary>
+    /// <param name="disable">Flag to disable other sound modes.</param>
     public void changeVocal(bool disable = false)
     {
         if (disable)
@@ -201,7 +223,11 @@ public class AdditiveSynthesis : MonoBehaviour
         audioSource.Play();
         playVocalCords = !playVocalCords;
     }
-    //Invertir el valor booleano de changeBreath
+
+    /// <summary>
+    /// Inverts the boolean value of playBreath.
+    /// </summary>
+    /// <param name="disable">Flag to disable other sound modes.</param>
     public void changeBreath(bool disable = false)
     {
         if (disable)
@@ -214,14 +240,21 @@ public class AdditiveSynthesis : MonoBehaviour
         playBreath = !playBreath;
             
     }
-    //Parar reproducción de tracto vocal.
+
+    /// <summary>
+    /// Stops the vocal tract sound.
+    /// </summary>
     public void StopVocals()
     {
         playBreath = false;
         playVocalCords = false;
-        audioSource.Stop();
     }
-    //Activar la reproducción de audio procedural y evitar aplicarla a un clip ya puesto.
+
+    /// <summary>
+    /// Activates or deactivates the procedural audio playback and prevents it from being applied to a clip already set.
+    /// </summary>
+    /// <param name="isEnable">Flag to enable or disable procedural audio playback.</param>
+
     public void setAdditiveEnable(bool isEnable)
     {
         if(isEnable && !playingCustomTone)
@@ -230,7 +263,12 @@ public class AdditiveSynthesis : MonoBehaviour
         }
         playingCustomTone = isEnable;
     }
-    //Invertir el valor del audio procedural
+
+    /// <summary>
+    /// Inverts the boolean value of playingCustomTone.
+    /// </summary>
+    /// <param name="disableVocals">Flag to disable vocal sound modes.</param>
+
     public void toggleAdditive(bool disableVocals = false)
     {
         if(!playingCustomTone)

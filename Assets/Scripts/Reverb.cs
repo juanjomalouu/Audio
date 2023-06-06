@@ -19,7 +19,10 @@ public class Reverb : MonoBehaviour
         audioSource.clip = clip;
         audioReverb.dryLevel = -10000;
     }
-    //Activar/desactivar reproducción
+
+    /// <summary>
+    /// Activates or deactivates audio playback.
+    /// </summary>
     public void playStop()
     {
         if(!audioSource.isPlaying)
@@ -33,7 +36,10 @@ public class Reverb : MonoBehaviour
         }
 
     }
-    //Activar/desactivar sonido directo
+
+    /// <summary>
+    /// Toggles direct sound on or off.
+    /// </summary>
     public void toggleReverbDirect()
     {
         if (!isDirect)
@@ -44,7 +50,10 @@ public class Reverb : MonoBehaviour
             audioReverb.dryLevel = -10000;
         isDirect = !isDirect;
     }
-    //Activar/desactivar primeras reflexiones
+
+    /// <summary>
+    /// Toggles early reflections on or off.
+    /// </summary>
     public void toggleReverbEarly()
     {
         if (!isEarly)
@@ -56,7 +65,10 @@ public class Reverb : MonoBehaviour
             audioReverb.reflectionsLevel = -10000;
         isEarly = !isEarly;
     }
-    //Activar o desactivar cola de reverberación
+
+    /// <summary>
+    /// Toggles reverb tail on or off.
+    /// </summary>
     public void toggleReverbTail()
     {
         if (!isTail)

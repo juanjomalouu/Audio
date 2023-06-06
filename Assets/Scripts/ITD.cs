@@ -47,7 +47,11 @@ public class ITD : MonoBehaviour
 
     }
 
-    //Aplicación del filtro ITD al clip de audio que se reproduzca.
+    /// <summary>
+    /// Applies the ITD filter to the audio clip being played.
+    /// </summary>
+    /// <param name="data">Array of audio samples.</param>
+    /// <param name="channels">Number of audio channels.</param>
     void OnAudioFilterRead(float[] data, int channels)
     {
         // DSP timing
@@ -55,11 +59,10 @@ public class ITD : MonoBehaviour
         double dataLen = data.Length / channels;   // the actual data length for each channel
         double chunkTime = dataLen / sampleRate;   // the time that each chunk of data lasts
         double dspTimeStep = chunkTime / dataLen;  // the time of each dsp step. (the time that each individual audio sample (actually a float value) lasts)
-        //updateFrequency();
+
         if (playingITD)
         {
             // SINE WAVE
-            // Calculate samples            
             for (int i = 0; i < dataLen; i++)
             {
                 double time = currentDspTime + i * dspTimeStep;
@@ -73,26 +76,36 @@ public class ITD : MonoBehaviour
     }
 
 
-    //Cambiamos el valor del panel de texto de Frecuencia
+    /// <summary>
+    /// Changes the value of the frequency text panel.
+    /// </summary>
+    /// <param name="v">The new frequency value.</param>
     private void changeITDFrequencyText(float v)
     {
         labelFreqP1.text = "Frecuencia: " + v + "Hz";
     }
 
-    //Recibimos la información al cambiar el Slider y calculamos el Azimuth
+    /// <summary>
+    /// Receives the information when the frequency slider is changed and calculates the azimuth.
+    /// </summary>
     public void changeITDFrequency()
     {
         ITDToneFreq = freqSlider.value;
         computeITDPhase();
     }
-    //Cambiamos el valor del ITD según el Slider y calculamos el Azimuth
+    /// <summary>
+    /// Changes the value of ITD according to the slider and calculates the azimuth.
+    /// </summary>
+    /// <param name="v">The new delay value.</param>
     private void changeITDDelay(float v)
     {
         ITDDelay = v;
         computeITDPhase();
     }
 
-    //Calculo del ITD junto con el delay y el Azimuth y modificación del texto que se muestra en la aplicación
+    /// <summary>
+    /// Calculates the ITD phase along with the delay and azimuth and modifies the displayed text in the application.
+    /// </summary>
     private void computeITDPhase()
     {
         // One period of the ITD tone is 1/ITDToneFreq seconds
@@ -110,7 +123,9 @@ public class ITD : MonoBehaviour
         labelAngleP1.text = "Azimuth: " + (int)angle + "º";
     }
 
-    //Reproducir o parar la reproducción del ITD.
+    /// <summary>
+    /// Toggles the ITD playback.
+    /// </summary>
     public void playITD()
     {
         playingITD = !playingITD;
