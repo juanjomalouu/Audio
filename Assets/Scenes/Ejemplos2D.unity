@@ -140,7 +140,6 @@ GameObject:
   - component: {fileID: 272449292}
   - component: {fileID: 272449291}
   - component: {fileID: 272449290}
-  - component: {fileID: 272449293}
   m_Layer: 5
   m_Name: SonidoSimple
   m_TagString: Untagged
@@ -263,24 +262,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 272449288}
   m_CullTransparentMesh: 1
---- !u!114 &272449293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 272449288}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 75beec9ac1199a34d81e526dea9491f3, type: 3}
-  audioSource: {fileID: 0}
-  additiveSynthesis: {fileID: 0}
-  showAudioBar: 0
-  audioBarSlider: {fileID: 0}
-  textLabel: {fileID: 0}
 --- !u!1 &295503088
 GameObject:
   m_ObjectHideFlags: 0
@@ -510,7 +491,6 @@ GameObject:
   - component: {fileID: 356640885}
   - component: {fileID: 356640884}
   - component: {fileID: 356640883}
-  - component: {fileID: 356640886}
   m_Layer: 5
   m_Name: "SonidoArm\xF3nico"
   m_TagString: Untagged
@@ -633,24 +613,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356640880}
   m_CullTransparentMesh: 1
---- !u!114 &356640886
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 356640880}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: 90cebf834806bf546a9694bfe444fc6c, type: 3}
-  audioSource: {fileID: 0}
-  additiveSynthesis: {fileID: 0}
-  showAudioBar: 0
-  audioBarSlider: {fileID: 0}
-  textLabel: {fileID: 0}
 --- !u!1 &389231215
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1182,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 9a28aa773900bce45aa5719138a2925d, type: 2}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
@@ -1427,7 +1389,6 @@ GameObject:
   - component: {fileID: 764354077}
   - component: {fileID: 764354076}
   - component: {fileID: 764354075}
-  - component: {fileID: 764354078}
   m_Layer: 5
   m_Name: SonidoComplejo
   m_TagString: Untagged
@@ -1550,24 +1511,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 764354072}
   m_CullTransparentMesh: 1
---- !u!114 &764354078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 764354072}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 500ee26bdfa4d714c9672b3b7bc86cb6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioClip: {fileID: 8300000, guid: b03ffee24244cd84b91978fb4bb1fa97, type: 3}
-  audioSource: {fileID: 0}
-  additiveSynthesis: {fileID: 0}
-  showAudioBar: 0
-  audioBarSlider: {fileID: 0}
-  textLabel: {fileID: 0}
 --- !u!1 &930337585
 GameObject:
   m_ObjectHideFlags: 0
